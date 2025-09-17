@@ -1,1 +1,1 @@
-Sitemap: https://tongsuoregonstate11.quarto.pub/tongsu11/sitemap.xml
+Sitemap: https://TONGSUOregonState.github.io/Quarto-Blog/sitemap.xml
