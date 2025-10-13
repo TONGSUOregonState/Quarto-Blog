@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 - source: project
   quarto-pub:
     - id: e443849c-8694-40a1-a7b2-b7682fbc175e
       url: https://tongsuoregonstate11.quarto.pub/tongsu11
+=======
+- source: Linkedlist.qmd
+  quarto-pub:
+    - id: 48b0ea75-e57b-47b9-824f-8b91f46272ad
+      url: https://tongsuoregonstate11.quarto.pub/linked-list-demo
+>>>>>>> d4ab4219c95664c4dc54c97c1ed7b8ee899180a7
