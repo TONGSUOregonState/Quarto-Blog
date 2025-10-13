@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Welcome to My Blog – Tong Su’s Blog</title>
+<title>C Programming Blog – Tong Su’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-a6e161b2431e1f94a14e0f5d32135a3c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-60d4398d82fec002ccec76571ed06d15.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a6e161b2431e1f94a14e0f5d32135a3c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-60d4398d82fec002ccec76571ed06d15.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,9 +70,67 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<link rel="stylesheet" href="styles.css">
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -80,9 +140,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Tong Su’s Blog</span>
     </a>
   </div>
@@ -93,19 +153,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./matlab/index.html"> 
+    <a class="nav-link" href="../matlab/index.html"> 
 <span class="menu-text">MATLAB</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./c-programming/index.html"> 
+    <a class="nav-link active" href="../c-programming/index.html" aria-current="page"> 
 <span class="menu-text">C Programming</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -131,9 +191,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#hello-my-name-is-tong-su" id="toc-hello-my-name-is-tong-su" class="nav-link active" data-scroll-target="#hello-my-name-is-tong-su">Hello, My name is Tong Su! 👋</a>
+  <li><a href="#c-语言编程博客" id="toc-c-语言编程博客" class="nav-link active" data-scroll-target="#c-语言编程博客">C 语言编程博客 💻</a>
   <ul class="collapse">
-  <li><a href="#博客分类" id="toc-博客分类" class="nav-link" data-scroll-target="#博客分类">博客分类</a></li>
+  <li><a href="#文章" id="toc-文章" class="nav-link" data-scroll-target="#文章">文章</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -143,7 +203,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Welcome to My Blog</h1>
+<h1 class="title">C Programming Blog</h1>
 </div>
 
 
@@ -160,48 +220,212 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="hello-my-name-is-tong-su" class="level1">
-<h1>Hello, My name is Tong Su! 👋</h1>
-<p>This is my first Quarto website. Here I can publish notes, code, and experiments.</p>
-<section id="博客分类" class="level2">
-<h2 class="anchored" data-anchor-id="博客分类">博客分类</h2>
-<div class="grid">
-<div class="g-col-6">
-<section id="matlab" class="level3">
-<h3 class="anchored" data-anchor-id="matlab"><a href="./matlab/index.html">MATLAB</a> 📊</h3>
-</section>
-<section id="c-programming" class="level3 g-col-6">
-<h3 class="anchored" data-anchor-id="c-programming"><a href="./c-programming/index.html">C Programming</a> 💻</h3>
-<ul>
-<li><p><a href="https://github.com/williamgherman/c-solutions?utm_source=chatgpt.com">C programming Modern Approach</a></p></li>
-<li><p><a href="https://github.com/williamgherman/c-solutions?utm_source=chatgpt.com">C solutions</a></p></li>
-<li><p><a href="https://github.com/ohkimur/the-c-programming-language-2nd-edition-solutions">The C answer book</a></p></li>
-<li><p><a href="https://digitaljs.tilk.eu/">logic circuit visualizer DigitalJS</a></p></li>
-</ul>
-</section>
-<section id="about-this-site" class="level2">
-<h2 class="anchored" data-anchor-id="about-this-site">About this site</h2>
-<ul>
-<li>Built with <a href="https://quarto.org">Quarto</a></li>
-<li>Published on <a href="https://quartopub.com">Quarto Pub</a><br>
-</li>
-<li>Source code available on <a href="https://github.com/TONGSUOregonState">GitHub</a></li>
-</ul>
-</section>
-<section id="联系方式-contact" class="level2">
-<h2 class="anchored" data-anchor-id="联系方式-contact">联系方式 Contact</h2>
-<ul>
-<li>🌐 GitHub: <a href="https://github.com/TONGSUOregonState"><span class="citation" data-cites="TONGSUOregonState">@TONGSUOregonState</span></a></li>
-</ul>
+<section id="c-语言编程博客" class="level1">
+<h1>C 语言编程博客 💻</h1>
+<p>欢迎来到 C 语言编程专区！这里分享系统编程、算法实现的相关内容。</p>
+<section id="文章" class="level2">
+<h2 class="anchored" data-anchor-id="文章">文章</h2>
+
 
 
 </section>
+</section>
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1760169735473" data-listing-reading-time-sort="3" data-listing-word-count-sort="402">
+<div class="thumbnail"><a href="../c-programming/53Stracatdemo.html" class="no-external">
+
+<p class="card-img-top"><img src="result.png"  class="thumbnail-image card-img"/></p>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../c-programming/53Stracatdemo.html" class="no-external">Solutions 5.3 Optimized Strcat.C</a>
+</h3>
+<div class="delink listing-description"><a href="../c-programming/53Stracatdemo.html" class="no-external">
+<code>void</code> → 函数返回类型，表示这个函数<strong>没有返回值</strong>。 （标准库里的 <code>strcat</code> 实际上返回 <code>char*</code>，这里只是教学版本。）
+</a></div>
+</div>
+<div class="metadata">
+<a href="../c-programming/53Stracatdemo.html" class="no-external">
+</a>
 </div>
 </div>
-</section>
-</section>
+<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1760169903337">
+<div class="thumbnail"><a href="../c-programming/code editor.html" class="no-external">
 
-</main> <!-- /main -->
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../c-programming/code editor.html" class="no-external"></a>
+</h3>
+<div class="delink listing-description"><a href="../c-programming/code editor.html" class="no-external">
+
+</a></div>
+</div>
+<div class="metadata">
+<a href="../c-programming/code editor.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1760170082885" data-listing-reading-time-sort="1" data-listing-word-count-sort="174">
+<div class="thumbnail"><a href="../c-programming/CPointer.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../c-programming/CPointer.html" class="no-external">Pointer</a>
+</h3>
+<div class="delink listing-description"><a href="../c-programming/CPointer.html" class="no-external">
+这一句是定义变量：
+</a></div>
+</div>
+<div class="metadata">
+<a href="../c-programming/CPointer.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1759031988438" data-listing-reading-time-sort="4" data-listing-word-count-sort="642">
+<div class="thumbnail"><a href="../c-programming/DynamicArray1.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../c-programming/DynamicArray1.html" class="no-external">Dynamic Array WS14</a>
+</h3>
+<div class="delink listing-description"><a href="../c-programming/DynamicArray1.html" class="no-external">
+=== Code Execution Successful ===
+</a></div>
+</div>
+<div class="metadata">
+<a href="../c-programming/DynamicArray1.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1760168494955" data-listing-reading-time-sort="3" data-listing-word-count-sort="428">
+<div class="thumbnail"><a href="../c-programming/Linkedlist.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../c-programming/Linkedlist.html" class="no-external">Linked list Program</a>
+</h3>
+<div class="delink listing-description"><a href="../c-programming/Linkedlist.html" class="no-external">
+这是一个简单的单向链表实现，包含以下功能：
+</a></div>
+</div>
+<div class="metadata">
+<a href="../c-programming/Linkedlist.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1760169296772" data-listing-reading-time-sort="3" data-listing-word-count-sort="466">
+<div class="thumbnail"><a href="../c-programming/October5thPractice.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../c-programming/October5thPractice.html" class="no-external"></a>
+</h3>
+<div class="delink listing-description"><a href="../c-programming/October5thPractice.html" class="no-external">
+你的 push_back 实际上在“头部插入”（更像 push_front），而且没有把旧的 tail 连到新节点上，所以 head 仍然只指向第一个节点 11111，它的 next 依旧是 NULL，打印当然只会输出一个数。
+</a></div>
+</div>
+<div class="metadata">
+<a href="../c-programming/October5thPractice.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-listing-file-modified-sort="1759024559662" data-listing-reading-time-sort="2" data-listing-word-count-sort="213">
+<div class="thumbnail"><a href="../c-programming/pushbackattempt.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../c-programming/pushbackattempt.html" class="no-external">Linkedlist Attempt,recitating push_back function , print function,</a>
+</h3>
+<div class="delink listing-description"><a href="../c-programming/pushbackattempt.html" class="no-external">
+11 -&gt;NULL
+</a></div>
+</div>
+<div class="metadata">
+<a href="../c-programming/pushbackattempt.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-listing-file-modified-sort="1758938422529" data-listing-reading-time-sort="1" data-listing-word-count-sort="114">
+<div class="thumbnail"><a href="../c-programming/pushbackattempt2.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../c-programming/pushbackattempt2.html" class="no-external">Linkedlist Attempt,recitating push_back function , print function,</a>
+</h3>
+<div class="delink listing-description"><a href="../c-programming/pushbackattempt2.html" class="no-external">
+11111NULL
+</a></div>
+</div>
+<div class="metadata">
+<a href="../c-programming/pushbackattempt2.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-listing-file-modified-sort="1759024703708" data-listing-reading-time-sort="3" data-listing-word-count-sort="465">
+<div class="thumbnail"><a href="../c-programming/pushbackcomplete.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../c-programming/pushbackcomplete.html" class="no-external">pushback complete program integer version</a>
+</h3>
+<div class="delink listing-description"><a href="../c-programming/pushbackcomplete.html" class="no-external">
+111111 11112 11113
+</a></div>
+</div>
+<div class="metadata">
+<a href="../c-programming/pushbackcomplete.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="9" data-listing-file-modified-sort="1759106966418" data-listing-reading-time-sort="3" data-listing-word-count-sort="541">
+<div class="thumbnail"><a href="../c-programming/setCapacityFucntionIllustration.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../c-programming/setCapacityFucntionIllustration.html" class="no-external">Untitled</a>
+</h3>
+<div class="delink listing-description"><a href="../c-programming/setCapacityFucntionIllustration.html" class="no-external">
+Got it 👍 — here’s the <strong>sequential summary</strong> of <code>_dynArraySetCapacity</code>:
+</a></div>
+</div>
+<div class="metadata">
+<a href="../c-programming/setCapacityFucntionIllustration.html" class="no-external">
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -603,7 +827,6 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
-_includes/cusdis.html
 
 
 

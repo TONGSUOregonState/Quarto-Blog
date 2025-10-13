@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Welcome to My Blog – Tong Su’s Blog</title>
+<title>Solutions 5.3 Optimized Strcat.C – Tong Su’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-a6e161b2431e1f94a14e0f5d32135a3c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-60d4398d82fec002ccec76571ed06d15.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a6e161b2431e1f94a14e0f5d32135a3c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-60d4398d82fec002ccec76571ed06d15.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -80,9 +115,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Tong Su’s Blog</span>
     </a>
   </div>
@@ -93,19 +128,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./matlab/index.html"> 
+    <a class="nav-link" href="../matlab/index.html"> 
 <span class="menu-text">MATLAB</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./c-programming/index.html"> 
+    <a class="nav-link" href="../c-programming/index.html"> 
 <span class="menu-text">C Programming</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -131,9 +166,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#hello-my-name-is-tong-su" id="toc-hello-my-name-is-tong-su" class="nav-link active" data-scroll-target="#hello-my-name-is-tong-su">Hello, My name is Tong Su! 👋</a>
+  <li><a href="#original-chapter-2-code" id="toc-original-chapter-2-code" class="nav-link active" data-scroll-target="#original-chapter-2-code">Original Chapter 2 code</a></li>
+  <li><a href="#solution-of-exercise-5.2" id="toc-solution-of-exercise-5.2" class="nav-link" data-scroll-target="#solution-of-exercise-5.2">Solution of Exercise 5.2</a></li>
+  <li><a href="#strcat-教学版逐行解析" id="toc-strcat-教学版逐行解析" class="nav-link" data-scroll-target="#strcat-教学版逐行解析"><code>strcat</code> 教学版逐行解析</a>
   <ul class="collapse">
-  <li><a href="#博客分类" id="toc-博客分类" class="nav-link" data-scroll-target="#博客分类">博客分类</a></li>
+  <li><a href="#整体代码" id="toc-整体代码" class="nav-link" data-scroll-target="#整体代码">整体代码</a></li>
+  <li><a href="#void-strcatchar-s-char-t" id="toc-void-strcatchar-s-char-t" class="nav-link" data-scroll-target="#void-strcatchar-s-char-t">1. <code>void strcat(char s[], char t[]) {</code></a></li>
+  <li><a href="#int-i-0-j-0" id="toc-int-i-0-j-0" class="nav-link" data-scroll-target="#int-i-0-j-0">2. <code>int i = 0, j = 0;</code></a></li>
+  <li><a href="#while-si-0" id="toc-while-si-0" class="nav-link" data-scroll-target="#while-si-0">3. <code>while (s[i] != '\0')</code></a></li>
+  <li><a href="#i" id="toc-i" class="nav-link" data-scroll-target="#i">4. <code>i++;</code></a></li>
+  <li><a href="#while-si-tj-0" id="toc-while-si-tj-0" class="nav-link" data-scroll-target="#while-si-tj-0">5. <code>while ((s[i++] = t[j++]) != '\0')</code></a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">6. <code>;</code></a></li>
+  <li><a href="#总结" id="toc-总结" class="nav-link" data-scroll-target="#总结">总结</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -143,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Welcome to My Blog</h1>
+<h1 class="title">Solutions 5.3 Optimized Strcat.C</h1>
 </div>
 
 
@@ -160,44 +204,148 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="hello-my-name-is-tong-su" class="level1">
-<h1>Hello, My name is Tong Su! 👋</h1>
-<p>This is my first Quarto website. Here I can publish notes, code, and experiments.</p>
-<section id="博客分类" class="level2">
-<h2 class="anchored" data-anchor-id="博客分类">博客分类</h2>
-<div class="grid">
-<div class="g-col-6">
-<section id="matlab" class="level3">
-<h3 class="anchored" data-anchor-id="matlab"><a href="./matlab/index.html">MATLAB</a> 📊</h3>
+<section id="original-chapter-2-code" class="level2">
+<h2 class="anchored" data-anchor-id="original-chapter-2-code">Original Chapter 2 code</h2>
+<details>
+<summary>
+Show the code
+</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> strcat<span class="op">(</span><span class="dt">char</span> s<span class="op">[],</span> <span class="dt">char</span> t<span class="op">[])</span> <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> j <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>s<span class="op">[</span>i<span class="op">]</span> <span class="op">!=</span> <span class="ch">'</span><span class="sc">\0</span><span class="ch">'</span><span class="op">)</span>  <span class="co">// 找到 s 的结尾</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        i<span class="op">++;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">((</span>s<span class="op">[</span>i<span class="op">++]</span> <span class="op">=</span> t<span class="op">[</span>j<span class="op">++])</span> <span class="op">!=</span> <span class="ch">'</span><span class="sc">\0</span><span class="ch">'</span><span class="op">)</span> <span class="co">// 复制 t</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 </section>
-<section id="c-programming" class="level3 g-col-6">
-<h3 class="anchored" data-anchor-id="c-programming"><a href="./c-programming/index.html">C Programming</a> 💻</h3>
-<ul>
-<li><p><a href="https://github.com/williamgherman/c-solutions?utm_source=chatgpt.com">C programming Modern Approach</a></p></li>
-<li><p><a href="https://github.com/williamgherman/c-solutions?utm_source=chatgpt.com">C solutions</a></p></li>
-<li><p><a href="https://github.com/ohkimur/the-c-programming-language-2nd-edition-solutions">The C answer book</a></p></li>
-<li><p><a href="https://digitaljs.tilk.eu/">logic circuit visualizer DigitalJS</a></p></li>
-</ul>
+<section id="solution-of-exercise-5.2" class="level2">
+<h2 class="anchored" data-anchor-id="solution-of-exercise-5.2">Solution of Exercise 5.2</h2>
+<details>
+<summary>
+Show the code
+</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> strcat_ptr<span class="op">(</span><span class="dt">char</span> <span class="op">*</span>s<span class="op">,</span> <span class="dt">char</span> <span class="op">*</span>t<span class="op">);</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">char</span> s<span class="op">[</span><span class="dv">100</span><span class="op">]</span> <span class="op">=</span> <span class="st">"This is the first string"</span><span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">char</span> t<span class="op">[]</span> <span class="op">=</span> <span class="st">", this second string!"</span><span class="op">;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  strcat_ptr<span class="op">(</span>s<span class="op">,</span> t<span class="op">);</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  puts<span class="op">(</span>s<span class="op">);</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co">// Concatenate t to end of s; s must be big enough.</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> strcat_ptr<span class="op">(</span><span class="dt">char</span> <span class="op">*</span>s<span class="op">,</span> <span class="dt">char</span> <span class="op">*</span>t<span class="op">)</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Find the end of s</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> <span class="op">(*</span>s<span class="op">)</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>      <span class="op">++</span>s<span class="op">;</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="co">// copy t to the end of s</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> <span class="op">(*</span>s<span class="op">++</span> <span class="op">=</span> <span class="op">*</span>t<span class="op">++)</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="op">;</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<hr>
 </section>
-<section id="about-this-site" class="level2">
-<h2 class="anchored" data-anchor-id="about-this-site">About this site</h2>
-<ul>
-<li>Built with <a href="https://quarto.org">Quarto</a></li>
-<li>Published on <a href="https://quartopub.com">Quarto Pub</a><br>
-</li>
-<li>Source code available on <a href="https://github.com/TONGSUOregonState">GitHub</a></li>
-</ul>
+<section id="strcat-教学版逐行解析" class="level1">
+<h1><code>strcat</code> 教学版逐行解析</h1>
+<section id="整体代码" class="level2">
+<h2 class="anchored" data-anchor-id="整体代码">整体代码</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> strcat<span class="op">(</span><span class="dt">char</span> s<span class="op">[],</span> <span class="dt">char</span> t<span class="op">[])</span> <span class="op">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> j <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>s<span class="op">[</span>i<span class="op">]</span> <span class="op">!=</span> <span class="ch">'</span><span class="sc">\0</span><span class="ch">'</span><span class="op">)</span>  <span class="co">// 找到 s 的结尾</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        i<span class="op">++;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">((</span>s<span class="op">[</span>i<span class="op">++]</span> <span class="op">=</span> t<span class="op">[</span>j<span class="op">++])</span> <span class="op">!=</span> <span class="ch">'</span><span class="sc">\0</span><span class="ch">'</span><span class="op">)</span> <span class="co">// 复制 t</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="op">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
 </section>
-<section id="联系方式-contact" class="level2">
-<h2 class="anchored" data-anchor-id="联系方式-contact">联系方式 Contact</h2>
+<section id="void-strcatchar-s-char-t" class="level2">
+<h2 class="anchored" data-anchor-id="void-strcatchar-s-char-t">1. <code>void strcat(char s[], char t[]) {</code></h2>
 <ul>
-<li>🌐 GitHub: <a href="https://github.com/TONGSUOregonState"><span class="citation" data-cites="TONGSUOregonState">@TONGSUOregonState</span></a></li>
+<li><p><code>void</code> → 函数返回类型，表示这个函数<strong>没有返回值</strong>。 （标准库里的 <code>strcat</code> 实际上返回 <code>char*</code>，这里只是教学版本。）</p></li>
+<li><p><code>strcat</code> → 函数名。</p></li>
+<li><p><code>char s[]</code> → 形参，看起来是“字符数组”，但在函数参数里 <strong>会退化成 <code>char*</code> 指针</strong>。</p>
+<ul>
+<li>所以 <code>s</code> 实际上是指向字符串首元素的指针。</li>
+</ul></li>
+<li><p><code>char t[]</code> → 同理，指向另一个字符串。</p></li>
 </ul>
+<p>👉 参数语义：<code>s</code> = 目标字符串；<code>t</code> = 要追加的字符串。</p>
+<hr>
+</section>
+<section id="int-i-0-j-0" class="level2">
+<h2 class="anchored" data-anchor-id="int-i-0-j-0">2. <code>int i = 0, j = 0;</code></h2>
+<ul>
+<li>定义两个整型变量 <code>i</code>、<code>j</code>。</li>
+<li>并初始化为 0。</li>
+<li>这里 <code>i</code> 用来扫描目标字符串 <code>s</code> 的下标；<code>j</code> 用来扫描源字符串 <code>t</code> 的下标。</li>
+</ul>
+<hr>
+</section>
+<section id="while-si-0" class="level2">
+<h2 class="anchored" data-anchor-id="while-si-0">3. <code>while (s[i] != '\0')</code></h2>
+<ul>
+<li><code>while (条件)</code> → 当条件为真时，循环执行。</li>
+<li><code>s[i]</code> → 访问数组元素，下标运算符 <code>[]</code>，等价于 <code>*(s + i)</code>。</li>
+<li><code>'\0'</code> → C 字符串的结束标志（ASCII 值 0 的字符）。</li>
+<li>条件：<code>s[i] != '\0'</code> → 表示“当前字符不是字符串结尾”。</li>
+</ul>
+<hr>
+</section>
+<section id="i" class="level2">
+<h2 class="anchored" data-anchor-id="i">4. <code>i++;</code></h2>
+<ul>
+<li><code>i++</code> → <strong>后缀自增运算符</strong>，等价于 <code>i = i + 1</code>。</li>
+<li>这里用来向后移动下标，直到遇到 <code>'\0'</code>。</li>
+<li>作用：<strong>找到 s 的末尾</strong>。</li>
+</ul>
+<hr>
+</section>
+<section id="while-si-tj-0" class="level2">
+<h2 class="anchored" data-anchor-id="while-si-tj-0">5. <code>while ((s[i++] = t[j++]) != '\0')</code></h2>
+<p>逐部分拆解：</p>
+<ul>
+<li><p><code>(s[i++] = t[j++])</code> →</p>
+<ul>
+<li><code>t[j++]</code>：先取 <code>t[j]</code> 的值，再让 <code>j</code> 自增。</li>
+<li><code>s[i++] = ...</code>：把这个值赋给 <code>s[i]</code>，再让 <code>i</code> 自增。</li>
+<li>结果是把 <code>t[j]</code> 的字符复制到 <code>s[i]</code>，然后两个下标都往后移一位。</li>
+</ul></li>
+<li><p><code>!= '\0'</code> → 检查刚复制的字符是不是 <code>'\0'</code>（字符串结束标志）。</p></li>
+<li><p>如果不是 <code>'\0'</code> → 循环继续，复制下一个字符。</p></li>
+<li><p>如果是 <code>'\0'</code> → 循环结束，完成追加。</p></li>
+</ul>
+<hr>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section">6. <code>;</code></h2>
+<ul>
+<li>这是一个 <strong>空语句</strong>。</li>
+<li>因为 <code>while</code> 的循环体就一行，而且逻辑已经在条件里完成，所以写一个分号表示“循环体什么都不做”。</li>
+<li>实际循环体的动作就是条件里的“赋值 + 判断”。</li>
+</ul>
+<hr>
+</section>
+<section id="总结" class="level2">
+<h2 class="anchored" data-anchor-id="总结">总结</h2>
+<ol type="1">
+<li><p><strong>找到 s 的末尾</strong>：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="op">(</span>s<span class="op">[</span>i<span class="op">]</span> <span class="op">!=</span> <span class="ch">'</span><span class="sc">\0</span><span class="ch">'</span><span class="op">)</span> i<span class="op">++;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p><strong>从 t 复制到 s 的末尾，直到 <code>'\0'</code> 为止</strong>：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="op">((</span>s<span class="op">[</span>i<span class="op">++]</span> <span class="op">=</span> t<span class="op">[</span>j<span class="op">++])</span> <span class="op">!=</span> <span class="ch">'</span><span class="sc">\0</span><span class="ch">'</span><span class="op">);</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ol>
+<p>最终效果：<code>t</code> 的内容被接到 <code>s</code> 后面，形成新的字符串。 <img src="result.png" class="img-fluid"> —</p>
 
 
-</section>
-</div>
-</div>
 </section>
 </section>
 
@@ -603,7 +751,6 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
-_includes/cusdis.html
 
 
 

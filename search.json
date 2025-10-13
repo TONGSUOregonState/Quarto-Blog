@@ -1,24 +1,129 @@
 [
   {
-    "objectID": "Linkedlist.html",
-    "href": "Linkedlist.html",
-    "title": "Linked List Demo",
+    "objectID": "matlab/index.html",
+    "href": "matlab/index.html",
+    "title": "MATLAB Blog",
     "section": "",
-    "text": "```{.c} #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\n// … 这里粘贴完整的 Linkedlist.c 代码 … #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\ntypedef struct Node { char name[32]; struct Node *next; } Node;\n/* 在链表尾部插入 name，返回“新的尾结点” / Node push_back(Node last, const char name) { Node p = (Node)malloc(sizeof(Node)); if (!p) { perror(“malloc”); exit(1); }\nstrncpy(p-&gt;name, name, sizeof(p-&gt;name)-1);\np-&gt;name[sizeof(p-&gt;name)-1] = '\\0';\np-&gt;next = NULL;\n\nif (last) {               // 不是第一个节点：把它接在尾巴后\n    last-&gt;next = p;\n}\nreturn p;                 // 返回新的“尾结点”\n}\n/* 打印链表 / void print_list(Node head) { for (Node *cur = head; cur; cur = cur-&gt;next) { printf(“%s%s”, cur-&gt;name, cur-&gt;next ? ” -&gt; ” : ” -&gt; null“); } }\n/* 统计节点数 / int count(Node h) { int numberofnodes = 0; for (Node *p = h; p != NULL; p = p-&gt;next) { numberofnodes++; } return numberofnodes; }\nint main(void) { Node head = NULL; Node tail = NULL;\n// 构造图里的初始链表：Jacob -&gt; Joseph -&gt; Mary\ntail = push_back(NULL, \"Jacob\");  // 第一个节点\nhead = tail;                      // 记录头指针\ntail = push_back(tail, \"Joseph\"); // 接在尾部\ntail = push_back(tail, \"Mary\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\\n\", count(head));\n\n// 在末尾插入 Ann（对应 Fig. 3.6 第二行）\ntail = push_back(tail, \"Ann\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\", count(head));\n\nreturn 0;\n}"
+    "text": "欢迎来到MATLAB专区！这里记录我的MATLAB学习笔记和项目经验。\n\n\n\n\n我的MATLAB项目实现和代码分析。\n← 返回主页"
   },
   {
-    "objectID": "Linkedlist.html#原始-c-程序",
-    "href": "Linkedlist.html#原始-c-程序",
-    "title": "Linked List Demo",
+    "objectID": "matlab/index.html#文章",
+    "href": "matlab/index.html#文章",
+    "title": "MATLAB Blog",
     "section": "",
-    "text": "```{.c} #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\n// … 这里粘贴完整的 Linkedlist.c 代码 … #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\ntypedef struct Node { char name[32]; struct Node *next; } Node;\n/* 在链表尾部插入 name，返回“新的尾结点” / Node push_back(Node last, const char name) { Node p = (Node)malloc(sizeof(Node)); if (!p) { perror(“malloc”); exit(1); }\nstrncpy(p-&gt;name, name, sizeof(p-&gt;name)-1);\np-&gt;name[sizeof(p-&gt;name)-1] = '\\0';\np-&gt;next = NULL;\n\nif (last) {               // 不是第一个节点：把它接在尾巴后\n    last-&gt;next = p;\n}\nreturn p;                 // 返回新的“尾结点”\n}\n/* 打印链表 / void print_list(Node head) { for (Node *cur = head; cur; cur = cur-&gt;next) { printf(“%s%s”, cur-&gt;name, cur-&gt;next ? ” -&gt; ” : ” -&gt; null“); } }\n/* 统计节点数 / int count(Node h) { int numberofnodes = 0; for (Node *p = h; p != NULL; p = p-&gt;next) { numberofnodes++; } return numberofnodes; }\nint main(void) { Node head = NULL; Node tail = NULL;\n// 构造图里的初始链表：Jacob -&gt; Joseph -&gt; Mary\ntail = push_back(NULL, \"Jacob\");  // 第一个节点\nhead = tail;                      // 记录头指针\ntail = push_back(tail, \"Joseph\"); // 接在尾部\ntail = push_back(tail, \"Mary\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\\n\", count(head));\n\n// 在末尾插入 Ann（对应 Fig. 3.6 第二行）\ntail = push_back(tail, \"Ann\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\", count(head));\n\nreturn 0;\n}"
+    "text": "我的MATLAB项目实现和代码分析。\n← 返回主页"
   },
   {
-    "objectID": "Example1.html",
-    "href": "Example1.html",
-    "title": "Quarto Basics",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to My Blog",
     "section": "",
-    "text": "For a demonstration of a line plot on a polar axis, see Figure 1.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
+    "text": "This is my first Quarto website. Here I can publish notes, code, and experiments.\n\n\n\n\n\n\n\n\n\n\nC programming Modern Approach\nC solutions\nThe C answer book\nlogic circuit visualizer DigitalJS\n\n\n\n\n\nBuilt with Quarto\nPublished on Quarto Pub\n\nSource code available on GitHub\n\n\n\n\n\n🌐 GitHub: @TONGSUOregonState"
+  },
+  {
+    "objectID": "index.html#博客分类",
+    "href": "index.html#博客分类",
+    "title": "Welcome to My Blog",
+    "section": "",
+    "text": "C programming Modern Approach\nC solutions\nThe C answer book\nlogic circuit visualizer DigitalJS\n\n\n\n\n\nBuilt with Quarto\nPublished on Quarto Pub\n\nSource code available on GitHub\n\n\n\n\n\n🌐 GitHub: @TONGSUOregonState"
+  },
+  {
+    "objectID": "index.html#about-this-site",
+    "href": "index.html#about-this-site",
+    "title": "Welcome to My Blog",
+    "section": "",
+    "text": "Built with Quarto\nPublished on Quarto Pub\n\nSource code available on GitHub"
+  },
+  {
+    "objectID": "index.html#联系方式-contact",
+    "href": "index.html#联系方式-contact",
+    "title": "Welcome to My Blog",
+    "section": "",
+    "text": "🌐 GitHub: @TONGSUOregonState"
+  },
+  {
+    "objectID": "c-programming/pushbackcomplete.html",
+    "href": "c-programming/pushbackcomplete.html",
+    "title": "pushback complete program integer version",
+    "section": "",
+    "text": "#include &lt;stdio.h&gt;\n#include &lt;stdlib.h&gt;\ntypedef struct Node {\n    int data;\n    //pointer to the next Node\n    struct Node *next;\n}Node;\n//give struct node another name Node\n\nint main(void);\n//we need a main function to test\nvoid print_list(Node *head);\n//we need a function print list to print the entrie nodes the function doest return anything thus it is void type\n// we need the head pointer of the entire Node as a reference to print the entire node list\nNode* push_back(Node *last, int value);\n//we need a push function to push every data to the last node of the entire node list\n//the type is Node* beacuse we want it to return the pointer of the new node\n\nNode* push_back(Node *last, int value){\n    if(last == NULL){\n        last = (Node *)malloc(sizeof(Node));\n        //if there is no node in the entire list, we just assign last as a node, (Node * implies that we want to the malloc give us type Node*, but not void*)\n        last-&gt;data = value;\n        last-&gt;next = NULL;\n        //since it is the last node, the next pointer should point to NULL\n        //we then return the address of the last node\n        return last;\n    }\n    else{\n        Node *newNode = (Node *)malloc(sizeof(Node));\n        newNode-&gt;data = value;\n        last-&gt;next = newNode;\n        newNode-&gt;next = NULL;\n       \n        return newNode;\n    }\n}\nvoid print_list(Node *head){\n    for(Node *cur = head;cur;cur = cur-&gt;next){\n        printf(\"%d\",cur-&gt;data);\n        printf(\"\\n\");\n       }\n     printf(\"\\n\");\n}\nint main(void){\n        Node *head = NULL; Node *tail = NULL;\n        tail = push_back(NULL,11111);\n        head = tail;\n        \n        tail = push_back(tail, 11112);\n        tail = push_back(tail, 11113);\n        \n        print_list(head);\n \n        \n        return 0;\n}"
+  },
+  {
+    "objectID": "c-programming/pushbackcomplete.html#execution-result",
+    "href": "c-programming/pushbackcomplete.html#execution-result",
+    "title": "pushback complete program integer version",
+    "section": "Execution result",
+    "text": "Execution result\n111111 11112 11113"
+  },
+  {
+    "objectID": "c-programming/pushbackattempt.html",
+    "href": "c-programming/pushbackattempt.html",
+    "title": "Linkedlist Attempt,recitating push_back function , print function,",
+    "section": "",
+    "text": "Show the code\n\n#include &lt;stdio.h&gt;\n#include &lt;stdlib.h&gt;\n#include &lt;string.h&gt;\n\ntypedef struct Node{\n    int info;\n    struct Node *next;\n}Node;\n\nNode* push_back(Node *last, int info);\nvoid print_list(Node *head);\n\n\n\n\nint main(void){\n    Node *head = NULL, *tail = NULL;\n    tail = push_back(NULL,11); \n    head = tail;\n    print_list(head); \n    return 0;\n}\n\nNode* push_back(Node *last, int info){\n    if(last == NULL){\n        Node *newNode = (Node *)malloc(sizeof(Node));\n        //loaded info value\n        newNode-&gt;info = info;\n        //setup the next pointer to NULL\n        newNode-&gt;next = NULL;\n           //return the back of the list\n        return newNode;\n    }\n}\n//print function\nvoid print_list(Node *head){\n    Node *cur = head;\n    while (cur!= NULL){\n        printf(\"%d -&gt;\", cur-&gt;info);\n        cur = cur-&gt;next;\n    }\n    printf(\"NULL\\n\");\n}"
+  },
+  {
+    "objectID": "c-programming/pushbackattempt.html#attempt-1",
+    "href": "c-programming/pushbackattempt.html#attempt-1",
+    "title": "Linkedlist Attempt,recitating push_back function , print function,",
+    "section": "",
+    "text": "Show the code\n\n#include &lt;stdio.h&gt;\n#include &lt;stdlib.h&gt;\n#include &lt;string.h&gt;\n\ntypedef struct Node{\n    int info;\n    struct Node *next;\n}Node;\n\nNode* push_back(Node *last, int info);\nvoid print_list(Node *head);\n\n\n\n\nint main(void){\n    Node *head = NULL, *tail = NULL;\n    tail = push_back(NULL,11); \n    head = tail;\n    print_list(head); \n    return 0;\n}\n\nNode* push_back(Node *last, int info){\n    if(last == NULL){\n        Node *newNode = (Node *)malloc(sizeof(Node));\n        //loaded info value\n        newNode-&gt;info = info;\n        //setup the next pointer to NULL\n        newNode-&gt;next = NULL;\n           //return the back of the list\n        return newNode;\n    }\n}\n//print function\nvoid print_list(Node *head){\n    Node *cur = head;\n    while (cur!= NULL){\n        printf(\"%d -&gt;\", cur-&gt;info);\n        cur = cur-&gt;next;\n    }\n    printf(\"NULL\\n\");\n}"
+  },
+  {
+    "objectID": "c-programming/pushbackattempt.html#execution-result",
+    "href": "c-programming/pushbackattempt.html#execution-result",
+    "title": "Linkedlist Attempt,recitating push_back function , print function,",
+    "section": "execution result",
+    "text": "execution result\n11 -&gt;NULL\n=== Code Execution Successful ===\n\n\nShow the code\n\n\n&lt;&gt;\n##Execution result"
+  },
+  {
+    "objectID": "c-programming/Linkedlist.html",
+    "href": "c-programming/Linkedlist.html",
+    "title": "Linked list Program",
+    "section": "",
+    "text": "Show the code\n\n#include &lt;stdio.h&gt;\n#include &lt;stdlib.h&gt;\n#include &lt;string.h&gt;\n\ntypedef struct Node {\n    char name[32];\n    struct Node *next;\n} Node;\n\n/* 在链表尾部插入 name，返回\"新的尾结点\" */\nNode* push_back(Node *last, const char *name) {\n    Node *p = (Node*)malloc(sizeof(Node));\n    if (!p) { perror(\"malloc\"); exit(1); }\n\n    strncpy(p-&gt;name, name, sizeof(p-&gt;name)-1);\n    p-&gt;name[sizeof(p-&gt;name)-1] = '\\0';\n    p-&gt;next = NULL;\n\n    if (last) { last-&gt;next = p; }\n    return p;\n}\n\nvoid print_list(Node *head) {\n    for (Node *cur = head; cur; cur = cur-&gt;next) {\n        printf(\"%s%s\", cur-&gt;name, cur-&gt;next ? \" -&gt; \" : \" -&gt; null\\n\");\n    }\n}\n\nint count(Node *h) {\n    int n = 0; for (Node *p = h; p; p = p-&gt;next) n++; return n;\n}\n\nint main(void) {\n    Node *head = NULL, *tail = NULL;\n    tail = push_back(NULL, \"Jacob\"); head = tail;\n    tail = push_back(tail, \"Joseph\");\n    tail = push_back(tail, \"Mary\");\n    print_list(head);\n    printf(\"This linked list has %d nodes.\\n\\n\", count(head));\n    tail = push_back(tail, \"Ann\");\n    print_list(head);\n    printf(\"This linked list has %d nodes.\\n\", count(head));\n    return 0;\n}"
+  },
+  {
+    "objectID": "c-programming/Linkedlist.html#原始-c-程序",
+    "href": "c-programming/Linkedlist.html#原始-c-程序",
+    "title": "Linked list Program",
+    "section": "",
+    "text": "Show the code\n\n#include &lt;stdio.h&gt;\n#include &lt;stdlib.h&gt;\n#include &lt;string.h&gt;\n\ntypedef struct Node {\n    char name[32];\n    struct Node *next;\n} Node;\n\n/* 在链表尾部插入 name，返回\"新的尾结点\" */\nNode* push_back(Node *last, const char *name) {\n    Node *p = (Node*)malloc(sizeof(Node));\n    if (!p) { perror(\"malloc\"); exit(1); }\n\n    strncpy(p-&gt;name, name, sizeof(p-&gt;name)-1);\n    p-&gt;name[sizeof(p-&gt;name)-1] = '\\0';\n    p-&gt;next = NULL;\n\n    if (last) { last-&gt;next = p; }\n    return p;\n}\n\nvoid print_list(Node *head) {\n    for (Node *cur = head; cur; cur = cur-&gt;next) {\n        printf(\"%s%s\", cur-&gt;name, cur-&gt;next ? \" -&gt; \" : \" -&gt; null\\n\");\n    }\n}\n\nint count(Node *h) {\n    int n = 0; for (Node *p = h; p; p = p-&gt;next) n++; return n;\n}\n\nint main(void) {\n    Node *head = NULL, *tail = NULL;\n    tail = push_back(NULL, \"Jacob\"); head = tail;\n    tail = push_back(tail, \"Joseph\");\n    tail = push_back(tail, \"Mary\");\n    print_list(head);\n    printf(\"This linked list has %d nodes.\\n\\n\", count(head));\n    tail = push_back(tail, \"Ann\");\n    print_list(head);\n    printf(\"This linked list has %d nodes.\\n\", count(head));\n    return 0;\n}"
+  },
+  {
+    "objectID": "c-programming/Linkedlist.html#程序说明",
+    "href": "c-programming/Linkedlist.html#程序说明",
+    "title": "Linked list Program",
+    "section": "程序说明",
+    "text": "程序说明\n这是一个简单的单向链表实现，包含以下功能：\n\n结构定义：Node 结构包含姓名字符串和指向下一个节点的指针\n插入功能：push_back() 函数在链表尾部添加新节点\n打印功能：print_list() 函数遍历并打印整个链表\n计数功能：count() 函数返回链表中节点的数量"
+  },
+  {
+    "objectID": "c-programming/Linkedlist.html#预期输出",
+    "href": "c-programming/Linkedlist.html#预期输出",
+    "title": "Linked list Program",
+    "section": "预期输出",
+    "text": "预期输出\nJacob -&gt; Joseph -&gt; Mary -&gt; null\nThis linked list has 3 nodes.\n\nJacob -&gt; Joseph -&gt; Mary -&gt; Ann -&gt; null\nThis linked list has 4 nodes.\n---\ntitle: \"逐行解析：main 程序\"\nformat: html\n---\n\n## 程序代码与逐行解释\n\n```c\nint main(void) {\n👉 程序入口函数，返回类型是 int，参数为空（void 表示 main 不接收命令行参数）。\n\n    Node *head = NULL, *tail = NULL;\n👉 定义两个指向 Node 的指针变量：\n\nhead：指向链表的头结点（第一个结点）。\ntail：指向链表的尾结点（最后一个结点）。 一开始它们都设为 NULL，表示链表还没有任何节点。\n\n\n    tail = push_back(NULL, \"Jacob\"); head = tail;\n👉 调用 push_back 在一个空链表中插入 \"Jacob\" 节点。\n\n返回的新节点地址赋给 tail（即尾结点）。\n同时因为这是第一个节点，所以 head = tail，链表的头和尾都指向这个新节点。\n\n\n    tail = push_back(tail, \"Joseph\");\n👉 在当前尾结点 \"Jacob\" 后面插入 \"Joseph\" 节点。 push_back 会返回新的尾结点 \"Joseph\"，赋值给 tail。 现在链表是：\nJacob -&gt; Joseph\n\n    tail = push_back(tail, \"Mary\");\n👉 在 \"Joseph\" 后面插入 \"Mary\" 节点。 返回的新尾结点 \"Mary\" 存入 tail。 链表变为：\nJacob -&gt; Joseph -&gt; Mary\n\n    print_list(head);\n👉 从 head 开始遍历链表，把链表所有节点的 name 打印出来。 输出类似：\nJacob -&gt; Joseph -&gt; Mary\n\n    printf(\"This linked list has %d nodes.\\n\\n\", count(head));\n👉 调用 count(head) 来统计链表中节点的个数，然后输出结果。 这时链表有 3 个节点，输出：\nThis linked list has 3 nodes.\n\n    tail = push_back(tail, \"Ann\");\n👉 在 \"Mary\" 后面插入 \"Ann\" 节点，tail 更新为 \"Ann\"。 链表变为：\nJacob -&gt; Joseph -&gt; Mary -&gt; Ann\n\n    print_list(head);\n👉 再次打印整个链表：\nJacob -&gt; Joseph -&gt; Mary -&gt; Ann\n\n    printf(\"This linked list has %d nodes.\\n\", count(head));\n👉 再次统计并输出节点数量，这次是 4：\nThis linked list has 4 nodes.\n\n    return 0;\n}\n👉 返回 0，表示程序正常结束。\n\n---\n\n要不要我帮你加一个 **示意图**（head、tail 每一步指向情况）放在 qmd 里？这样渲染后不仅有文字解释，还能直观看链表结构。"
+  },
+  {
+    "objectID": "c-programming/DynamicArray1.html",
+    "href": "c-programming/DynamicArray1.html",
+    "title": "Dynamic Array WS14",
+    "section": "",
+    "text": "#include &lt;stdio.h&gt;\n#include &lt;stdlib.h&gt;\n#include &lt;assert.h&gt;\n\n#ifndef TYPE\n#define TYPE double\n#endif\n\nstruct dynArr {\n    TYPE *data;     /* pointer to the data array */\n    int size;       /* number of elements in the array */\n    int capacity;   /* capacity of the data array */\n};\n\nvoid dynArrayInit(struct dynArr *v, int capacity) {\n    v-&gt;data = (TYPE *) malloc(sizeof(TYPE) * capacity);\n    assert(v-&gt;data != 0);\n    v-&gt;size = 0;\n    v-&gt;capacity = capacity;\n}\n\nvoid dynArrayFree(struct dynArr *v) {\n    if(v-&gt;data != 0) {\n        free(v-&gt;data);  /* free memory space */\n        v-&gt;data = 0;    /* make it point to NULL */\n    }\n    v-&gt;size = 0;\n    v-&gt;capacity = 0;\n}\n\nint dynArraySize(struct dynArr *v) {\n    return v-&gt;size;\n}\n\nvoid _dynArraySetCapacity(struct dynArr *v, int newCapacity) {\n    assert(newCapacity &gt; 0);\n\n    printf(\"⚙️ Resizing array: old capacity = %d, new capacity = %d\\n\",\n           v-&gt;capacity, newCapacity);\n\n    if (newCapacity &lt; v-&gt;size) {\n        v-&gt;size = newCapacity; /* 截断已有元素，防止越界 */\n    }\n    TYPE *newData = (TYPE *) malloc(sizeof(TYPE) * newCapacity);\n    assert(newData != 0);\n\n    for (int i = 0; i &lt; v-&gt;size; ++i) {\n        newData[i] = v-&gt;data[i];\n    }\n\n    free(v-&gt;data);\n    v-&gt;data = newData;\n    v-&gt;capacity = newCapacity;\n}\n\nvoid dynArrayAdd(struct dynArr *v, TYPE val) {\n    /* Check if a resize is necessary */\n    if(v-&gt;size &gt;= v-&gt;capacity)\n        _dynArraySetCapacity(v, 2 * v-&gt;capacity);\n    v-&gt;data[v-&gt;size] = val;\n    v-&gt;size++;\n}\n\n/* ---------- 演示用 main 函数 ---------- */\nint main() {\n    struct dynArr arr;\n    dynArrayInit(&arr, 2);  // 初始容量设为 2\n    printf(\"Initial capacity: %d\\n\", arr.capacity);\n\n    // 连续插入多个元素，触发扩容\n    for (int i = 0; i &lt; 10; i++) {\n        dynArrayAdd(&arr, i * 1.1);  // 插入 i*1.1\n        printf(\"Added %.1f | size = %d, capacity = %d\\n\",\n               arr.data[arr.size-1], arr.size, arr.capacity);\n    }\n\n    // 打印数组内容\n    printf(\"Final array: [\");\n    for (int i = 0; i &lt; arr.size; i++) {\n        printf(\"%.1f\", arr.data[i]);\n        if (i &lt; arr.size-1) printf(\", \");\n    }\n    printf(\"]\\n\");\n\n    dynArrayFree(&arr);\n    return 0;\n}"
+  },
+  {
+    "objectID": "c-programming/DynamicArray1.html#output",
+    "href": "c-programming/DynamicArray1.html#output",
+    "title": "Dynamic Array WS14",
+    "section": "Output",
+    "text": "Output\nInitial capacity: 2\nAdded 0.0 | size = 1, capacity = 2\nAdded 1.1 | size = 2, capacity = 2\n⚙️ Resizing array: old capacity = 2, new capacity = 4\nAdded 2.2 | size = 3, capacity = 4\nAdded 3.3 | size = 4, capacity = 4\n⚙️ Resizing array: old capacity = 4, new capacity = 8\nAdded 4.4 | size = 5, capacity = 8\nAdded 5.5 | size = 6, capacity = 8\nAdded 6.6 | size = 7, capacity = 8\nAdded 7.7 | size = 8, capacity = 8\n⚙️ Resizing array: old capacity = 8, new capacity = 16\nAdded 8.8 | size = 9, capacity = 16\nAdded 9.9 | size = 10, capacity = 16\nFinal array: [0.0, 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9]\n=== Code Execution Successful ==="
+  },
+  {
+    "objectID": "c-programming/DynamicArray1.html#note",
+    "href": "c-programming/DynamicArray1.html#note",
+    "title": "Dynamic Array WS14",
+    "section": "Note",
+    "text": "Note\nIn C, the compiler cannot identify whether the result would exceed maximum memory location of the array. Thus we need the dynamic array"
   },
   {
     "objectID": "about.html",
@@ -28,17 +133,185 @@
     "text": "About this site"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to My Blog",
+    "objectID": "c-programming/53Stracatdemo.html",
+    "href": "c-programming/53Stracatdemo.html",
+    "title": "Solutions 5.3 Optimized Strcat.C",
     "section": "",
-    "text": "This is my first Quarto website.\nHere I can publish notes, code, and experiments.\n\n\n\nBuilt with Quarto\n\nPublished on Quarto Pub\n\nStay tuned for updates!"
+    "text": "Show the code\n\nvoid strcat(char s[], char t[]) {\n    int i = 0, j = 0;\n    while (s[i] != '\\0')  // 找到 s 的结尾\n        i++;\n    while ((s[i++] = t[j++]) != '\\0') // 复制 t\n        ;\n}"
   },
   {
-    "objectID": "index.html#about-this-site",
-    "href": "index.html#about-this-site",
-    "title": "Welcome to My Blog",
+    "objectID": "c-programming/53Stracatdemo.html#original-chapter-2-code",
+    "href": "c-programming/53Stracatdemo.html#original-chapter-2-code",
+    "title": "Solutions 5.3 Optimized Strcat.C",
     "section": "",
-    "text": "Built with Quarto\n\nPublished on Quarto Pub\n\nStay tuned for updates!"
+    "text": "Show the code\n\nvoid strcat(char s[], char t[]) {\n    int i = 0, j = 0;\n    while (s[i] != '\\0')  // 找到 s 的结尾\n        i++;\n    while ((s[i++] = t[j++]) != '\\0') // 复制 t\n        ;\n}"
+  },
+  {
+    "objectID": "c-programming/53Stracatdemo.html#solution-of-exercise-5.2",
+    "href": "c-programming/53Stracatdemo.html#solution-of-exercise-5.2",
+    "title": "Solutions 5.3 Optimized Strcat.C",
+    "section": "Solution of Exercise 5.2",
+    "text": "Solution of Exercise 5.2\n\n\nShow the code\n\n#include &lt;stdio.h&gt;\n\nvoid strcat_ptr(char *s, char *t);\n\nint main(void)\n{\n  char s[100] = \"This is the first string\";\n  char t[] = \", this second string!\";\n\n  strcat_ptr(s, t);\n\n  puts(s);\n\n  return 0;\n}\n\n// Concatenate t to end of s; s must be big enough.\nvoid strcat_ptr(char *s, char *t)\n{\n  // Find the end of s\n  while (*s)\n      ++s;\n\n  // copy t to the end of s\n  while (*s++ = *t++)\n    ;\n}"
+  },
+  {
+    "objectID": "c-programming/53Stracatdemo.html#整体代码",
+    "href": "c-programming/53Stracatdemo.html#整体代码",
+    "title": "Solutions 5.3 Optimized Strcat.C",
+    "section": "整体代码",
+    "text": "整体代码\nvoid strcat(char s[], char t[]) {\n    int i = 0, j = 0;\n    while (s[i] != '\\0')  // 找到 s 的结尾\n        i++;\n    while ((s[i++] = t[j++]) != '\\0') // 复制 t\n        ;\n}"
+  },
+  {
+    "objectID": "c-programming/53Stracatdemo.html#void-strcatchar-s-char-t",
+    "href": "c-programming/53Stracatdemo.html#void-strcatchar-s-char-t",
+    "title": "Solutions 5.3 Optimized Strcat.C",
+    "section": "1. void strcat(char s[], char t[]) {",
+    "text": "1. void strcat(char s[], char t[]) {\n\nvoid → 函数返回类型，表示这个函数没有返回值。 （标准库里的 strcat 实际上返回 char*，这里只是教学版本。）\nstrcat → 函数名。\nchar s[] → 形参，看起来是“字符数组”，但在函数参数里 会退化成 char* 指针。\n\n所以 s 实际上是指向字符串首元素的指针。\n\nchar t[] → 同理，指向另一个字符串。\n\n👉 参数语义：s = 目标字符串；t = 要追加的字符串。"
+  },
+  {
+    "objectID": "c-programming/53Stracatdemo.html#int-i-0-j-0",
+    "href": "c-programming/53Stracatdemo.html#int-i-0-j-0",
+    "title": "Solutions 5.3 Optimized Strcat.C",
+    "section": "2. int i = 0, j = 0;",
+    "text": "2. int i = 0, j = 0;\n\n定义两个整型变量 i、j。\n并初始化为 0。\n这里 i 用来扫描目标字符串 s 的下标；j 用来扫描源字符串 t 的下标。"
+  },
+  {
+    "objectID": "c-programming/53Stracatdemo.html#while-si-0",
+    "href": "c-programming/53Stracatdemo.html#while-si-0",
+    "title": "Solutions 5.3 Optimized Strcat.C",
+    "section": "3. while (s[i] != '\\0')",
+    "text": "3. while (s[i] != '\\0')\n\nwhile (条件) → 当条件为真时，循环执行。\ns[i] → 访问数组元素，下标运算符 []，等价于 *(s + i)。\n'\\0' → C 字符串的结束标志（ASCII 值 0 的字符）。\n条件：s[i] != '\\0' → 表示“当前字符不是字符串结尾”。"
+  },
+  {
+    "objectID": "c-programming/53Stracatdemo.html#i",
+    "href": "c-programming/53Stracatdemo.html#i",
+    "title": "Solutions 5.3 Optimized Strcat.C",
+    "section": "4. i++;",
+    "text": "4. i++;\n\ni++ → 后缀自增运算符，等价于 i = i + 1。\n这里用来向后移动下标，直到遇到 '\\0'。\n作用：找到 s 的末尾。"
+  },
+  {
+    "objectID": "c-programming/53Stracatdemo.html#while-si-tj-0",
+    "href": "c-programming/53Stracatdemo.html#while-si-tj-0",
+    "title": "Solutions 5.3 Optimized Strcat.C",
+    "section": "5. while ((s[i++] = t[j++]) != '\\0')",
+    "text": "5. while ((s[i++] = t[j++]) != '\\0')\n逐部分拆解：\n\n(s[i++] = t[j++]) →\n\nt[j++]：先取 t[j] 的值，再让 j 自增。\ns[i++] = ...：把这个值赋给 s[i]，再让 i 自增。\n结果是把 t[j] 的字符复制到 s[i]，然后两个下标都往后移一位。\n\n!= '\\0' → 检查刚复制的字符是不是 '\\0'（字符串结束标志）。\n如果不是 '\\0' → 循环继续，复制下一个字符。\n如果是 '\\0' → 循环结束，完成追加。"
+  },
+  {
+    "objectID": "c-programming/53Stracatdemo.html#section",
+    "href": "c-programming/53Stracatdemo.html#section",
+    "title": "Solutions 5.3 Optimized Strcat.C",
+    "section": "6. ;",
+    "text": "6. ;\n\n这是一个 空语句。\n因为 while 的循环体就一行，而且逻辑已经在条件里完成，所以写一个分号表示“循环体什么都不做”。\n实际循环体的动作就是条件里的“赋值 + 判断”。"
+  },
+  {
+    "objectID": "c-programming/53Stracatdemo.html#总结",
+    "href": "c-programming/53Stracatdemo.html#总结",
+    "title": "Solutions 5.3 Optimized Strcat.C",
+    "section": "总结",
+    "text": "总结\n\n找到 s 的末尾：\nwhile (s[i] != '\\0') i++;\n从 t 复制到 s 的末尾，直到 '\\0' 为止：\nwhile ((s[i++] = t[j++]) != '\\0');\n\n最终效果：t 的内容被接到 s 后面，形成新的字符串。  —"
+  },
+  {
+    "objectID": "c-programming/CPointer.html",
+    "href": "c-programming/CPointer.html",
+    "title": "Pointer",
+    "section": "",
+    "text": "Person *p;\n这一句是定义变量：\n所以： 👉 p 本身是个指针变量，它里面存的是一个地址。 👉 这个地址必须是某个 Person 类型对象的地址。"
+  },
+  {
+    "objectID": "c-programming/CPointer.html#tom",
+    "href": "c-programming/CPointer.html#tom",
+    "title": "Pointer",
+    "section": "2. &tom",
+    "text": "2. &tom\nPerson tom;\n&tom;\n\ntom 是一个 Person 类型的结构体变量。\n&tom 表示“取 tom 的地址”。\n&tom 的类型是 Person*。\n\n这与 p 的类型刚好匹配。"
+  },
+  {
+    "objectID": "c-programming/CPointer.html#p-tom",
+    "href": "c-programming/CPointer.html#p-tom",
+    "title": "Pointer",
+    "section": "3. p = &tom",
+    "text": "3. p = &tom\np = &tom;\n把 tom 的地址存进 p。结果是：p 指向 tom。\n内存可以想象成这样：\ntom (类型 Person)          p (类型 Person*)\n+------------------+       +----------------+\n| name[32]         |       | 0x1000 (地址) |\n| age              |       +----------------+\n+------------------+\n      ^\n      |\n      +---- p 里面存的就是 tom 的地址 0x1000"
+  },
+  {
+    "objectID": "c-programming/CPointer.html#p-的意思",
+    "href": "c-programming/CPointer.html#p-的意思",
+    "title": "Pointer",
+    "section": "4. *p 的意思",
+    "text": "4. *p 的意思\n\np 是一个指针，存了地址。\n*p 表示“解引用”这个指针，找到它指向的对象”。\n所以 *p 的类型是 Person，等价于“tom 本身”。\n\n示例：\n(*p).age = 20;   // 相当于 tom.age = 20;"
+  },
+  {
+    "objectID": "c-programming/CPointer.html#和---的关系",
+    "href": "c-programming/CPointer.html#和---的关系",
+    "title": "Pointer",
+    "section": "5. 和 -> 的关系",
+    "text": "5. 和 -&gt; 的关系\n因为 (*p).age 太啰嗦，C 提供简写：\np-&gt;age = 20;   // 等价于 (*p).age"
+  },
+  {
+    "objectID": "c-programming/CPointer.html#总结一句",
+    "href": "c-programming/CPointer.html#总结一句",
+    "title": "Pointer",
+    "section": "✅ 总结一句",
+    "text": "✅ 总结一句\n\np 是个指针变量，里面存的是 tom 的地址。\n*p 不是“指针”，而是“指针所指的对象”（即 tom）。\n&tom 是取 tom 的地址，正好能赋值给 p。\n\n```"
+  },
+  {
+    "objectID": "c-programming/index.html",
+    "href": "c-programming/index.html",
+    "title": "C Programming Blog",
+    "section": "",
+    "text": "欢迎来到 C 语言编程专区！这里分享系统编程、算法实现的相关内容。"
+  },
+  {
+    "objectID": "c-programming/October5thPractice.html",
+    "href": "c-programming/October5thPractice.html",
+    "title": "Tong Su's Blog",
+    "section": "",
+    "text": "#include &lt;stdio.h&gt;\n#include &lt;stdlib.h&gt;\n\ntypedef struct Node{\n int data;\n struct Node *next;\n}\n\nint main(void);\nvoid print_list(Node *head);\n\nNode* push_back(Node *last, int value);\n\nNode* push_back(Node *last, int value){\n    if(last == NULL){\n        last = (Node *)malloc(sizeof(Node));\n        last-&gt;data = value;\n        last-&gt;next = NULL;\n        return last;\n    }\n    Node *newNode = (Node *)malloc(sizeof(Node));\n    newNode-&gt;data = value;\n    newNode-&gt;next = last;\n    return newNode;\n}\nvoid print_list(Node *head){\n    for(Node *cur = head;cur;cur = cur-&gt;next){\n        printf(\"%d\",cur-&gt;data);\n        printf(\"\\n\");\n    }\n     \n    printf(\"\\n\");\n    \n}\n\n\n\n\nint main(void){\n    Node *head = NULL;\n    Node *tail = NULL;\n    head = push_back(NULL, 11111);\n    tail = head;\n    tail = push_back(tail,11112);\n    tail = push_back(tail,11113);\n    print_list(head);\n    return 0;\n}\n你的 push_back 实际上在“头部插入”（更像 push_front），而且没有把旧的 tail 连到新节点上，所以 head 仍然只指向第一个节点 11111，它的 next 依旧是 NULL，打印当然只会输出一个数。\n关键错误在这里：\nnewNode-&gt;next = last; // 这行把新节点指向了旧 tail（等于往前插） return newNode; // 但没有让旧 tail-&gt;next 指向新节点\n把它改成真正的“尾插”：让旧 last（也就是当前尾节点）的 next 指向新节点；新节点的 next 置为 NULL；然后返回新尾节点即可。\n另外你少了 typedef 的别名定义。下面是一份最小改动、可工作的版本：\n#include &lt;stdio.h&gt; #include &lt;stdlib.h&gt;\ntypedef struct Node{ int data; struct Node *next; } Node;\nvoid print_list(Node *head);\nNode* push_back(Node last, int value){ Node newNode = (Node *)malloc(sizeof(Node)); if (!newNode) { perror(“malloc”); exit(1); } newNode-&gt;data = value; newNode-&gt;next = NULL;\nif (last) {\n    last-&gt;next = newNode;   // 旧尾巴连到新节点\n}\nreturn newNode;             // 返回新的尾节点\n}\nvoid print_list(Node head){ for (Node cur = head; cur; cur = cur-&gt;next){ printf(“%d”, cur-&gt;data); } printf(“”); }\nint main(void){ Node head = NULL; Node tail = NULL;\nhead = push_back(NULL, 11111); // 创建第一个节点\ntail = head;                   // 头尾同一节点\n\ntail = push_back(tail, 11112); // 追加到尾部，更新 tail\ntail = push_back(tail, 11113);\n\nprint_list(head);              // 输出 11111 11112 11113\nreturn 0;\n}\n要点小结：\n“尾插”逻辑：last-&gt;next = newNode; newNode-&gt;next = NULL; return newNode;\n第一个节点单独处理：head = push_back(NULL, value); tail = head;\n别忘了补上 typedef … } Node;，否则 Node 这个类型名不存在。"
+  },
+  {
+    "objectID": "c-programming/pushbackattempt2.html",
+    "href": "c-programming/pushbackattempt2.html",
+    "title": "Linkedlist Attempt,recitating push_back function , print function,",
+    "section": "",
+    "text": "Show the code\n\n#include &lt;stdio.h&gt;\n#include &lt;stdlib.h&gt;\ntypedef struct Node {\n    int value;\n    struct Node *next;\n}Node;\n\nNode* push_back(Node *last, int value);\nvoid print_list(Node *head);\n\nint main(void){\nNode *head = NULL;\nhead = push_back(NULL,11111);\nprint_list(head);\nreturn 0;\n}\n\nNode* push_back(Node *last, int value){\n    if(last==NULL){\n       last =(Node *)malloc(sizeof(last));\n       last-&gt;value = value;\n       last-&gt;next = NULL;\n    }\n}\n\nvoid print_list(Node *head){\n    for (Node *cur = head ; cur ; cur = cur-&gt;next)   // ❌ 这里没有让 cur 前进\n        printf(\"%d\", cur-&gt;value);\n    printf(\"NULL\\n\");\n}"
+  },
+  {
+    "objectID": "c-programming/pushbackattempt2.html#attempt-1",
+    "href": "c-programming/pushbackattempt2.html#attempt-1",
+    "title": "Linkedlist Attempt,recitating push_back function , print function,",
+    "section": "",
+    "text": "Show the code\n\n#include &lt;stdio.h&gt;\n#include &lt;stdlib.h&gt;\ntypedef struct Node {\n    int value;\n    struct Node *next;\n}Node;\n\nNode* push_back(Node *last, int value);\nvoid print_list(Node *head);\n\nint main(void){\nNode *head = NULL;\nhead = push_back(NULL,11111);\nprint_list(head);\nreturn 0;\n}\n\nNode* push_back(Node *last, int value){\n    if(last==NULL){\n       last =(Node *)malloc(sizeof(last));\n       last-&gt;value = value;\n       last-&gt;next = NULL;\n    }\n}\n\nvoid print_list(Node *head){\n    for (Node *cur = head ; cur ; cur = cur-&gt;next)   // ❌ 这里没有让 cur 前进\n        printf(\"%d\", cur-&gt;value);\n    printf(\"NULL\\n\");\n}"
+  },
+  {
+    "objectID": "c-programming/pushbackattempt2.html#execution-result",
+    "href": "c-programming/pushbackattempt2.html#execution-result",
+    "title": "Linkedlist Attempt,recitating push_back function , print function,",
+    "section": "execution result",
+    "text": "execution result\n11111NULL"
+  },
+  {
+    "objectID": "c-programming/setCapacityFucntionIllustration.html",
+    "href": "c-programming/setCapacityFucntionIllustration.html",
+    "title": "Untitled",
+    "section": "",
+    "text": "void _dynArraySetCapacity(struct dynArr *v, int newCapacity){\n          //when the dynamic array doesnt have enough capacity, we need to give the \n          /*a new capacity, the capacity should be double of the originla capacity of the \n           array, thus we need a paramater of the original address of the dynamic array\n          and \n          */\n          //we first need to make sure the new capacity must be greater than 0\n        assert(newCapacity &gt; 0);\n          // since this program is mainly educational, we need to print out \n        printf(\"?? Resizing array: old capacity = %d, new capacity = %d\\n\",\n           v-&gt;capacity, newCapacity);\n          // we need to consider two scenarios\n          //whether the new capacity is greater than or less than the current size\n          //if the capacity is less than the current size of the array, we cut it off\n        if(newCapacity &lt; v-&gt;size) {\n        v-&gt;size = newCapacity; //cut it off if the new capacity is less than the current size of the array\n        }\n        //Now since the new capacity is greater than the original array, we need to create a new array\n        double *newData = (TYPE *) malloc(sizeof(TYPE) * newCapacity);\n        // we need to make sure the new array which called newData which is a pointer varaiable \n        //indeed has created and it is not NULL\n        assert(newData != 0);//0 is NULL\n        \n        //Now we just copy the original array to the new array which is called newData\n        for (int i = 0; i &lt; v-&gt;size; ++i) {\n        newData[i] = v-&gt;data[i];\n        }\n        //we then destroy the original array\n        free(v-&gt;data);\n        //we now assign the value of the new array (with double the capacity of the old array\n        //to the original dynamic array \"v\"\n        v-&gt;data = newData;\n        //and we assign the new capacity value to the original array\n        v-&gt;capacity = newCapacity;\n        \n        \n        \n }"
+  },
+  {
+    "objectID": "c-programming/setCapacityFucntionIllustration.html#key-points",
+    "href": "c-programming/setCapacityFucntionIllustration.html#key-points",
+    "title": "Untitled",
+    "section": "key points",
+    "text": "key points\nGot it 👍 — here’s the sequential summary of _dynArraySetCapacity:\n\n\nSequential Summary\n\nCheck input\n\nEnsure newCapacity &gt; 0 using assert.\n\nPrint info\n\nDisplay old and new capacities with printf.\n\nAdjust size if needed\n\nIf newCapacity &lt; v-&gt;size, set v-&gt;size = newCapacity to avoid overflow.\n\nAllocate new memory\n\nCreate a new array (newData) with size newCapacity.\n\nVerify allocation\n\nAssert newData is not NULL.\n\nCopy elements\n\nFor each index i up to v-&gt;size, copy v-&gt;data[i] into newData[i].\n\nFree old memory\n\nRelease the memory used by the old array with free(v-&gt;data).\n\nUpdate pointer\n\nSet v-&gt;data = newData.\n\nUpdate capacity\n\nSet v-&gt;capacity = newCapacity."
+  },
+  {
+    "objectID": "c-programming/setCapacityFucntionIllustration.html#below-is-the-original-dynarrayadd-function",
+    "href": "c-programming/setCapacityFucntionIllustration.html#below-is-the-original-dynarrayadd-function",
+    "title": "Untitled",
+    "section": "Below is the original dynArrayAdd function",
+    "text": "Below is the original dynArrayAdd function\nwhich we need to write a setCapacity function to be compactible with it\nvoid dynArrayAdd(struct dynArr *v, TYPE val) {  \n/* Check if a resize is necessary */  \nif(v-&gt;size &gt;= v-&gt;capacity)  \n_dynArraySetCapacity(v, 2 * v-&gt;capacity);  \nv-&gt;data[v-&gt;size] = val;  \nv-&gt;size++;  \n}"
+  },
+  {
+    "objectID": "matlab/Example1.html",
+    "href": "matlab/Example1.html",
+    "title": "Quarto Basics",
+    "section": "",
+    "text": "Protected\n    Enter password to view this page:\n    \n    Unlock\n    Wrong password\n  \n\n\n\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n    👍 +1\n  \n  0\n  \n\n\n\n  \n    👍 点赞\n  \n  0"
   }
 ]
