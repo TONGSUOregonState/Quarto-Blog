@@ -7,5 +7,80 @@
   },
   "Linkedlist.qmd": {
     "Linkedlist.html": "206bb0d3"
+  },
+  "Example1.qmd": {
+    "Example1.html": "28659ef9"
+  },
+  "C Programming Language.qmd": {
+    "C Programming Language.html": "aba9ddae"
+  },
+  "MatlabBlog.qmd": {
+    "MatlabBlog.html": "115fd3ec"
+  },
+  "c-programming/index.qmd": {
+    "index.html": "c1b54975"
+  },
+  "c-programming/Linkedlist.qmd": {
+    "Linkedlist.html": "79e05e4b"
+  },
+  "matlab/Example1.qmd": {
+    "Example1.html": "cbf01553"
+  },
+  "matlab/index.qmd": {
+    "index.html": "a9005cf9"
+  },
+  "c-programming/CPointer指针.qmd": {
+    "CPointer指针.html": "e9b720e8"
+  },
+  "c-programming/CPointer.qmd": {
+    "CPointer.html": "245457d5"
+  },
+  "c-programming/Solution 5-3, Optimize StrcatC.qmd": {
+    "Solution 5-3, Optimize StrcatC.html": "aaaed83a"
+  },
+  "c-programming/53Stracatdemo.qmd": {
+    "53Stracatdemo.html": "80851018"
+  },
+  "c-programming/code editor.qmd": {
+    "code editor.html": "e9ea0cd2"
+  },
+  "c-programming/pushbackattempt.qmd": {
+    "pushbackattempt.html": "57ab9bcb"
+  },
+  "c-programming/pushbackattempt2.qmd": {
+    "pushbackattempt2.html": "f4c08560"
+  },
+  "c-programming/pushbackcomplete.qmd": {
+    "pushbackcomplete.html": "d7130bcc"
+  },
+  "c-programming/DynamicArray1.qmd": {
+    "DynamicArray1.html": "e43de1c1"
+  },
+  "c-programming/setCapacityFucntionIllustration.qmd": {
+    "setCapacityFucntionIllustration.html": "c526c476"
+  },
+  "c-programming/October5thPractice.qmd": {
+    "October5thPractice.html": "9b1739b1"
+  },
+  "myblog/about.qmd": {
+    "about.html": "1fee2178"
+  },
+  "myblog/Linkedlist.qmd": {
+    "Linkedlist.html": "029d96aa"
+  },
+  "c-programming/HackerRank.qmd": {
+    "HackerRank.html": "b60b5d4d"
+  },
+  "updates.qmd": {
+    "updates.html": "2334dc05"
+  },
+  "c-plus-plus/index.qmd": {
+    "index.html": "ac7d2268"
+  },
+  "data-structures/index.qmd": {
+    "index.html": "6f09221a"
+  },
+  "Digital-Logic-Design/index.qmd": {
+    "index.html": "1757527a"
   }
 }

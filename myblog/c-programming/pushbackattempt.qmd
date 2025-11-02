@@ -1,0 +1,77 @@
+---
+title: "Linkedlist Attempt,recitating push_back function , print function, "
+format: 
+  html:
+    highlight-style: github
+---
+
+## Attempt 1
+
+<details markdown="1">
+<summary>Show the code</summary>
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct Node{
+    int info;
+    struct Node *next;
+}Node;
+
+Node* push_back(Node *last, int info);
+void print_list(Node *head);
+
+
+
+
+int main(void){
+    Node *head = NULL, *tail = NULL;
+    tail = push_back(NULL,11); 
+    head = tail;
+    print_list(head); 
+    return 0;
+}
+
+Node* push_back(Node *last, int info){
+    if(last == NULL){
+        Node *newNode = (Node *)malloc(sizeof(Node));
+        //loaded info value
+        newNode->info = info;
+        //setup the next pointer to NULL
+        newNode->next = NULL;
+           //return the back of the list
+        return newNode;
+    }
+}
+//print function
+void print_list(Node *head){
+    Node *cur = head;
+    while (cur!= NULL){
+        printf("%d ->", cur->info);
+        cur = cur->next;
+    }
+    printf("NULL\n");
+}
+    
+
+```
+
+</details>
+
+## execution result
+
+11 ->NULL
+
+
+=== Code Execution Successful ===
+
+<details markdown="1">
+<summary>Show the code</summary>
+```c
+
+```
+<\details>
+
+##Execution result
+

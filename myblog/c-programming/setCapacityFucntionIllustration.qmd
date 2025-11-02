@@ -1,0 +1,108 @@
+---
+title: "Untitled"
+format: html
+---
+
+```c
+void _dynArraySetCapacity(struct dynArr *v, int newCapacity){
+	      //when the dynamic array doesnt have enough capacity, we need to give the 
+	      /*a new capacity, the capacity should be double of the originla capacity of the 
+	       array, thus we need a paramater of the original address of the dynamic array
+	      and 
+	      */
+	      //we first need to make sure the new capacity must be greater than 0
+	    assert(newCapacity > 0);
+	      // since this program is mainly educational, we need to print out 
+	    printf("?? Resizing array: old capacity = %d, new capacity = %d\n",
+           v->capacity, newCapacity);
+	      // we need to consider two scenarios
+	      //whether the new capacity is greater than or less than the current size
+	      //if the capacity is less than the current size of the array, we cut it off
+	    if(newCapacity < v->size) {
+        v->size = newCapacity; //cut it off if the new capacity is less than the current size of the array
+		}
+		//Now since the new capacity is greater than the original array, we need to create a new array
+		double *newData = (TYPE *) malloc(sizeof(TYPE) * newCapacity);
+		// we need to make sure the new array which called newData which is a pointer varaiable 
+		//indeed has created and it is not NULL
+		assert(newData != 0);//0 is NULL
+		
+		//Now we just copy the original array to the new array which is called newData
+		for (int i = 0; i < v->size; ++i) {
+        newData[i] = v->data[i];
+        }
+		//we then destroy the original array
+		free(v->data);
+		//we now assign the value of the new array (with double the capacity of the old array
+		//to the original dynamic array "v"
+		v->data = newData;
+		//and we assign the new capacity value to the original array
+		v->capacity = newCapacity;
+		
+		
+		
+ }
+```
+
+## key points
+Got it 👍 — here’s the **sequential summary** of `_dynArraySetCapacity`:
+
+---
+
+### Sequential Summary
+
+1. **Check input**
+
+   * Ensure `newCapacity > 0` using `assert`.
+
+2. **Print info**
+
+   * Display old and new capacities with `printf`.
+
+3. **Adjust size if needed**
+
+   * If `newCapacity < v->size`, set `v->size = newCapacity` to avoid overflow.
+
+4. **Allocate new memory**
+
+   * Create a new array (`newData`) with size `newCapacity`.
+
+5. **Verify allocation**
+
+   * Assert `newData` is not `NULL`.
+
+6. **Copy elements**
+
+   * For each index `i` up to `v->size`, copy `v->data[i]` into `newData[i]`.
+
+7. **Free old memory**
+
+   * Release the memory used by the old array with `free(v->data)`.
+
+8. **Update pointer**
+
+   * Set `v->data = newData`.
+
+9. **Update capacity**
+
+   * Set `v->capacity = newCapacity`.
+
+---
+
+## Below is the original dynArrayAdd function
+
+which we need to write a setCapacity function to be compactible with it
+
+
+
+```c
+void dynArrayAdd(struct dynArr *v, TYPE val) {  
+/* Check if a resize is necessary */  
+if(v->size >= v->capacity)  
+_dynArraySetCapacity(v, 2 * v->capacity);  
+v->data[v->size] = val;  
+v->size++;  
+}
+```
+
+

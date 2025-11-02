@@ -1,21 +1,46 @@
 project:
   type: website
+  output-dir: _site
+  pre-render:
+    - python generate_log.py
+
+# 站点级元数据（这里新增一个字段供页脚引用）
+metadata:
+  date-format: "YYYY-MM-DD"
+  date-modified: last-modified
+  site_title: "Tong Su's Blog"   # ← 新增：供页脚引用
 
 website:
-  title: "myblog"
+  title: "Tong Su's Blog"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: matlab/index.qmd
+        text: MATLAB
+      - href: c-programming/index.qmd
+        text: C Programming
+      - href: c-plus-plus/index.qmd
+        text: C++
+      - href: Digital-Logic-Design/index.qmd
+        text: Digital Logic Design
+      - href: data-structures/index.qmd
+        text: Data Structures
+      - href: updates.qmd
+        text: 更新日志
+      - href: about.qmd
+        text: About
+    right:
+      - icon: github
+        href: https://github.com/TONGSUOregonState/Quarto-Blog
+        aria-label: GitHub
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
+    theme: cosmo
     css: styles.css
     toc: true
-
-
-
+    highlight-style: github
+    page-footer:
+      right: "最后更新于：{{< meta date-modified >}}"
+      left:  "&copy; {{< meta site_title >}}"   # ← 用 meta，而不是 var

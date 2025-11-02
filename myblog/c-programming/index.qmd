@@ -1,0 +1,13 @@
+---
+title: "C 语言编程博客"
+listing:
+  contents: .
+  sort: "date desc"
+  type: default
+  fields: [date, title, description]
+  date-format: "YYYY-MM-DD"
+  
+page-layout: article
+---
+
+欢迎来到 C 语言编程专区！这里分享系统编程、算法实现相关内容。
