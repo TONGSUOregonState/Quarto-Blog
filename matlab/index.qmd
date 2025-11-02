@@ -1,0 +1,15 @@
+---
+title: "MATLAB Blog"
+---
+
+# MATLAB 相关博客 📊
+
+欢迎来到MATLAB专区！这里记录我的MATLAB学习笔记和项目经验。
+
+## 文章
+
+### [Example1](Example1.qmd)
+
+我的MATLAB项目实现和代码分析。
+
+[← 返回主页](../index.qmd)

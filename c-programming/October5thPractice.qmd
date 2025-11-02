@@ -1,0 +1,114 @@
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct Node{
+ int data;
+ struct Node *next;
+}
+
+int main(void);
+void print_list(Node *head);
+
+Node* push_back(Node *last, int value);
+
+Node* push_back(Node *last, int value){
+    if(last == NULL){
+        last = (Node *)malloc(sizeof(Node));
+        last->data = value;
+        last->next = NULL;
+        return last;
+    }
+    Node *newNode = (Node *)malloc(sizeof(Node));
+    newNode->data = value;
+    newNode->next = last;
+    return newNode;
+}
+void print_list(Node *head){
+    for(Node *cur = head;cur;cur = cur->next){
+        printf("%d",cur->data);
+        printf("\n");
+    }
+     
+    printf("\n");
+    
+}
+
+
+
+
+int main(void){
+    Node *head = NULL;
+    Node *tail = NULL;
+    head = push_back(NULL, 11111);
+    tail = head;
+    tail = push_back(tail,11112);
+    tail = push_back(tail,11113);
+    print_list(head);
+    return 0;
+}
+
+```
+你的 push_back 实际上在“头部插入”（更像 push_front），而且没有把旧的 tail 连到新节点上，所以 head 仍然只指向第一个节点 11111，它的 next 依旧是 NULL，打印当然只会输出一个数。
+
+关键错误在这里：
+
+newNode->next = last;   // 这行把新节点指向了旧 tail（等于往前插）
+return newNode;         // 但没有让旧 tail->next 指向新节点
+
+
+把它改成真正的“尾插”：让旧 last（也就是当前尾节点）的 next 指向新节点；新节点的 next 置为 NULL；然后返回新尾节点即可。
+
+另外你少了 typedef 的别名定义。下面是一份最小改动、可工作的版本：
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct Node{
+    int data;
+    struct Node *next;
+} Node;
+
+void print_list(Node *head);
+
+Node* push_back(Node *last, int value){
+    Node *newNode = (Node *)malloc(sizeof(Node));
+    if (!newNode) { perror("malloc"); exit(1); }
+    newNode->data = value;
+    newNode->next = NULL;
+
+    if (last) {
+        last->next = newNode;   // 旧尾巴连到新节点
+    }
+    return newNode;             // 返回新的尾节点
+}
+
+void print_list(Node *head){
+    for (Node *cur = head; cur; cur = cur->next){
+        printf("%d\n", cur->data);
+    }
+    printf("\n");
+}
+
+int main(void){
+    Node *head = NULL;
+    Node *tail = NULL;
+
+    head = push_back(NULL, 11111); // 创建第一个节点
+    tail = head;                   // 头尾同一节点
+
+    tail = push_back(tail, 11112); // 追加到尾部，更新 tail
+    tail = push_back(tail, 11113);
+
+    print_list(head);              // 输出 11111 11112 11113
+    return 0;
+}
+
+
+要点小结：
+
+“尾插”逻辑：last->next = newNode; newNode->next = NULL; return newNode;
+
+第一个节点单独处理：head = push_back(NULL, value); tail = head;
+
+别忘了补上 typedef … } Node;，否则 Node 这个类型名不存在。

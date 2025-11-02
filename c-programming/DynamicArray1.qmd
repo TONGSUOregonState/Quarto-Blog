@@ -1,0 +1,119 @@
+---
+title: "Dynamic Array WS14"
+format: html
+---
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+
+#ifndef TYPE
+#define TYPE double
+#endif
+
+struct dynArr {
+    TYPE *data;     /* pointer to the data array */
+    int size;       /* number of elements in the array */
+    int capacity;   /* capacity of the data array */
+};
+
+void dynArrayInit(struct dynArr *v, int capacity) {
+    v->data = (TYPE *) malloc(sizeof(TYPE) * capacity);
+    assert(v->data != 0);
+    v->size = 0;
+    v->capacity = capacity;
+}
+
+void dynArrayFree(struct dynArr *v) {
+    if(v->data != 0) {
+        free(v->data);  /* free memory space */
+        v->data = 0;    /* make it point to NULL */
+    }
+    v->size = 0;
+    v->capacity = 0;
+}
+
+int dynArraySize(struct dynArr *v) {
+    return v->size;
+}
+
+void _dynArraySetCapacity(struct dynArr *v, int newCapacity) {
+    assert(newCapacity > 0);
+
+    printf("⚙️ Resizing array: old capacity = %d, new capacity = %d\n",
+           v->capacity, newCapacity);
+
+    if (newCapacity < v->size) {
+        v->size = newCapacity; /* 截断已有元素，防止越界 */
+    }
+    TYPE *newData = (TYPE *) malloc(sizeof(TYPE) * newCapacity);
+    assert(newData != 0);
+
+    for (int i = 0; i < v->size; ++i) {
+        newData[i] = v->data[i];
+    }
+
+    free(v->data);
+    v->data = newData;
+    v->capacity = newCapacity;
+}
+
+void dynArrayAdd(struct dynArr *v, TYPE val) {
+    /* Check if a resize is necessary */
+    if(v->size >= v->capacity)
+        _dynArraySetCapacity(v, 2 * v->capacity);
+    v->data[v->size] = val;
+    v->size++;
+}
+
+/* ---------- 演示用 main 函数 ---------- */
+int main() {
+    struct dynArr arr;
+    dynArrayInit(&arr, 2);  // 初始容量设为 2
+    printf("Initial capacity: %d\n", arr.capacity);
+
+    // 连续插入多个元素，触发扩容
+    for (int i = 0; i < 10; i++) {
+        dynArrayAdd(&arr, i * 1.1);  // 插入 i*1.1
+        printf("Added %.1f | size = %d, capacity = %d\n",
+               arr.data[arr.size-1], arr.size, arr.capacity);
+    }
+
+    // 打印数组内容
+    printf("Final array: [");
+    for (int i = 0; i < arr.size; i++) {
+        printf("%.1f", arr.data[i]);
+        if (i < arr.size-1) printf(", ");
+    }
+    printf("]\n");
+
+    dynArrayFree(&arr);
+    return 0;
+}
+
+
+
+```
+## Output
+```c
+Initial capacity: 2
+Added 0.0 | size = 1, capacity = 2
+Added 1.1 | size = 2, capacity = 2
+⚙️ Resizing array: old capacity = 2, new capacity = 4
+Added 2.2 | size = 3, capacity = 4
+Added 3.3 | size = 4, capacity = 4
+⚙️ Resizing array: old capacity = 4, new capacity = 8
+Added 4.4 | size = 5, capacity = 8
+Added 5.5 | size = 6, capacity = 8
+Added 6.6 | size = 7, capacity = 8
+Added 7.7 | size = 8, capacity = 8
+⚙️ Resizing array: old capacity = 8, new capacity = 16
+Added 8.8 | size = 9, capacity = 16
+Added 9.9 | size = 10, capacity = 16
+Final array: [0.0, 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9]
+```
+
+=== Code Execution Successful ===
+
+## Note
+In C, the compiler cannot identify whether the result would exceed maximum memory location of the array. Thus we need the dynamic array

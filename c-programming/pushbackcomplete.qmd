@@ -1,0 +1,72 @@
+---
+title: "pushback complete program integer version "
+format: 
+  html:
+    highlight-style: github
+---
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct Node {
+    int data;
+    //pointer to the next Node
+    struct Node *next;
+}Node;
+//give struct node another name Node
+
+int main(void);
+//we need a main function to test
+void print_list(Node *head);
+//we need a function print list to print the entrie nodes the function doest return anything thus it is void type
+// we need the head pointer of the entire Node as a reference to print the entire node list
+Node* push_back(Node *last, int value);
+//we need a push function to push every data to the last node of the entire node list
+//the type is Node* beacuse we want it to return the pointer of the new node
+
+Node* push_back(Node *last, int value){
+    if(last == NULL){
+        last = (Node *)malloc(sizeof(Node));
+        //if there is no node in the entire list, we just assign last as a node, (Node * implies that we want to the malloc give us type Node*, but not void*)
+        last->data = value;
+        last->next = NULL;
+        //since it is the last node, the next pointer should point to NULL
+        //we then return the address of the last node
+        return last;
+    }
+    else{
+        Node *newNode = (Node *)malloc(sizeof(Node));
+        newNode->data = value;
+        last->next = newNode;
+        newNode->next = NULL;
+       
+        return newNode;
+    }
+}
+void print_list(Node *head){
+    for(Node *cur = head;cur;cur = cur->next){
+        printf("%d",cur->data);
+        printf("\n");
+       }
+     printf("\n");
+}
+int main(void){
+        Node *head = NULL; Node *tail = NULL;
+        tail = push_back(NULL,11111);
+        head = tail;
+        
+        tail = push_back(tail, 11112);
+        tail = push_back(tail, 11113);
+        
+        print_list(head);
+ 
+        
+        return 0;
+}
+    
+    
+    
+    
+```
+## Execution result
+111111 11112 11113

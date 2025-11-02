@@ -1,0 +1,10 @@
+{
+  "profiles": [
+    {
+      "name": "Command Prompt (Here)",
+      "path": "C:\\Windows\\System32\\cmd.exe",
+      "args": ["/K", "cd $(ItemDir)"],
+      "startingDirectory": "$(ItemDir)"
+    }
+  ]
+}

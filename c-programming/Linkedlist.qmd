@@ -1,0 +1,224 @@
+---
+title: "Linked list Program"
+format: 
+  html:
+    highlight-style: github
+---
+
+## 原始 C 程序
+
+<details markdown="1">
+<summary>Show the code</summary>
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct Node {
+    char name[32];
+    struct Node *next;
+} Node;
+
+/* 在链表尾部插入 name，返回"新的尾结点" */
+Node* push_back(Node *last, const char *name) {
+    Node *p = (Node*)malloc(sizeof(Node));
+    if (!p) { perror("malloc"); exit(1); }
+
+    strncpy(p->name, name, sizeof(p->name)-1);
+    p->name[sizeof(p->name)-1] = '\0';
+    p->next = NULL;
+
+    if (last) { last->next = p; }
+    return p;
+}
+
+void print_list(Node *head) {
+    for (Node *cur = head; cur; cur = cur->next) {
+        printf("%s%s", cur->name, cur->next ? " -> " : " -> null\n");
+    }
+}
+
+int count(Node *h) {
+    int n = 0; for (Node *p = h; p; p = p->next) n++; return n;
+}
+
+int main(void) {
+    Node *head = NULL, *tail = NULL;
+    tail = push_back(NULL, "Jacob"); head = tail;
+    tail = push_back(tail, "Joseph");
+    tail = push_back(tail, "Mary");
+    print_list(head);
+    printf("This linked list has %d nodes.\n\n", count(head));
+    tail = push_back(tail, "Ann");
+    print_list(head);
+    printf("This linked list has %d nodes.\n", count(head));
+    return 0;
+}
+```
+
+</details>
+
+## 程序说明
+
+这是一个简单的单向链表实现，包含以下功能：
+
+- **结构定义**：`Node` 结构包含姓名字符串和指向下一个节点的指针
+- **插入功能**：`push_back()` 函数在链表尾部添加新节点
+- **打印功能**：`print_list()` 函数遍历并打印整个链表
+- **计数功能**：`count()` 函数返回链表中节点的数量
+
+## 预期输出
+
+```
+Jacob -> Joseph -> Mary -> null
+This linked list has 3 nodes.
+
+Jacob -> Joseph -> Mary -> Ann -> null
+This linked list has 4 nodes.
+```
+
+
+````markdown
+---
+title: "逐行解析：main 程序"
+format: html
+---
+
+## 程序代码与逐行解释
+
+```c
+int main(void) {
+````
+
+👉 程序入口函数，返回类型是 `int`，参数为空（`void` 表示 main 不接收命令行参数）。
+
+---
+
+```c
+    Node *head = NULL, *tail = NULL;
+```
+
+👉 定义两个指向 `Node` 的指针变量：
+
+* `head`：指向链表的头结点（第一个结点）。
+* `tail`：指向链表的尾结点（最后一个结点）。
+  一开始它们都设为 `NULL`，表示链表还没有任何节点。
+
+---
+
+```c
+    tail = push_back(NULL, "Jacob"); head = tail;
+```
+
+👉 调用 `push_back` 在一个空链表中插入 `"Jacob"` 节点。
+
+* 返回的新节点地址赋给 `tail`（即尾结点）。
+* 同时因为这是第一个节点，所以 `head = tail`，链表的头和尾都指向这个新节点。
+
+---
+
+```c
+    tail = push_back(tail, "Joseph");
+```
+
+👉 在当前尾结点 `"Jacob"` 后面插入 `"Joseph"` 节点。
+`push_back` 会返回新的尾结点 `"Joseph"`，赋值给 `tail`。
+现在链表是：
+
+```
+Jacob -> Joseph
+```
+
+---
+
+```c
+    tail = push_back(tail, "Mary");
+```
+
+👉 在 `"Joseph"` 后面插入 `"Mary"` 节点。
+返回的新尾结点 `"Mary"` 存入 `tail`。
+链表变为：
+
+```
+Jacob -> Joseph -> Mary
+```
+
+---
+
+```c
+    print_list(head);
+```
+
+👉 从 `head` 开始遍历链表，把链表所有节点的 `name` 打印出来。
+输出类似：
+
+```
+Jacob -> Joseph -> Mary
+```
+
+---
+
+```c
+    printf("This linked list has %d nodes.\n\n", count(head));
+```
+
+👉 调用 `count(head)` 来统计链表中节点的个数，然后输出结果。
+这时链表有 3 个节点，输出：
+
+```
+This linked list has 3 nodes.
+```
+
+---
+
+```c
+    tail = push_back(tail, "Ann");
+```
+
+👉 在 `"Mary"` 后面插入 `"Ann"` 节点，`tail` 更新为 `"Ann"`。
+链表变为：
+
+```
+Jacob -> Joseph -> Mary -> Ann
+```
+
+---
+
+```c
+    print_list(head);
+```
+
+👉 再次打印整个链表：
+
+```
+Jacob -> Joseph -> Mary -> Ann
+```
+
+---
+
+```c
+    printf("This linked list has %d nodes.\n", count(head));
+```
+
+👉 再次统计并输出节点数量，这次是 4：
+
+```
+This linked list has 4 nodes.
+```
+
+---
+
+```c
+    return 0;
+}
+```
+
+👉 返回 0，表示程序正常结束。
+
+```
+
+---
+
+要不要我帮你加一个 **示意图**（head、tail 每一步指向情况）放在 qmd 里？这样渲染后不仅有文字解释，还能直观看链表结构。
+```

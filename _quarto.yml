@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Tong Su's Blog"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: matlab/index.qmd
+        text: MATLAB
+      - href: c-programming/index.qmd
+        text: C Programming
+      - href: about.qmd
+        text: About
+    right:
+      - icon: github
+        href: https://github.com/TONGSUOregonState/Quarto-Blog
+        aria-label: GitHub
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    highlight-style: github
+  

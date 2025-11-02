@@ -1,0 +1,155 @@
+---
+title: "Solutions 5.3 Optimized Strcat.C"
+format: 
+  html:
+    highlight-style: github
+---
+## Original Chapter 2 code
+<details markdown="1">
+<summary>Show the code</summary>
+
+```c
+void strcat(char s[], char t[]) {
+    int i = 0, j = 0;
+    while (s[i] != '\0')  // 找到 s 的结尾
+        i++;
+    while ((s[i++] = t[j++]) != '\0') // 复制 t
+        ;
+}
+```
+</details>
+
+## Solution of Exercise 5.2
+<details markdown="1">
+<summary>Show the code</summary>
+
+```c
+#include <stdio.h>
+
+void strcat_ptr(char *s, char *t);
+
+int main(void)
+{
+  char s[100] = "This is the first string";
+  char t[] = ", this second string!";
+
+  strcat_ptr(s, t);
+
+  puts(s);
+
+  return 0;
+}
+
+// Concatenate t to end of s; s must be big enough.
+void strcat_ptr(char *s, char *t)
+{
+  // Find the end of s
+  while (*s)
+      ++s;
+
+  // copy t to the end of s
+  while (*s++ = *t++)
+    ;
+}
+
+```
+
+</details>
+
+---
+
+# `strcat` 教学版逐行解析
+
+## 整体代码
+
+```c
+void strcat(char s[], char t[]) {
+    int i = 0, j = 0;
+    while (s[i] != '\0')  // 找到 s 的结尾
+        i++;
+    while ((s[i++] = t[j++]) != '\0') // 复制 t
+        ;
+}
+```
+
+---
+
+## 1. `void strcat(char s[], char t[]) {`
+
+* `void` → 函数返回类型，表示这个函数**没有返回值**。
+  （标准库里的 `strcat` 实际上返回 `char*`，这里只是教学版本。）
+* `strcat` → 函数名。
+* `char s[]` → 形参，看起来是“字符数组”，但在函数参数里 **会退化成 `char*` 指针**。
+
+  * 所以 `s` 实际上是指向字符串首元素的指针。
+* `char t[]` → 同理，指向另一个字符串。
+
+👉 参数语义：`s` = 目标字符串；`t` = 要追加的字符串。
+
+---
+
+## 2. `int i = 0, j = 0;`
+
+* 定义两个整型变量 `i`、`j`。
+* 并初始化为 0。
+* 这里 `i` 用来扫描目标字符串 `s` 的下标；`j` 用来扫描源字符串 `t` 的下标。
+
+---
+
+## 3. `while (s[i] != '\0')`
+
+* `while (条件)` → 当条件为真时，循环执行。
+* `s[i]` → 访问数组元素，下标运算符 `[]`，等价于 `*(s + i)`。
+* `'\0'` → C 字符串的结束标志（ASCII 值 0 的字符）。
+* 条件：`s[i] != '\0'` → 表示“当前字符不是字符串结尾”。
+
+---
+
+## 4. `i++;`
+
+* `i++` → **后缀自增运算符**，等价于 `i = i + 1`。
+* 这里用来向后移动下标，直到遇到 `'\0'`。
+* 作用：**找到 s 的末尾**。
+
+---
+
+## 5. `while ((s[i++] = t[j++]) != '\0')`
+
+逐部分拆解：
+
+* `(s[i++] = t[j++])` →
+
+  * `t[j++]`：先取 `t[j]` 的值，再让 `j` 自增。
+  * `s[i++] = ...`：把这个值赋给 `s[i]`，再让 `i` 自增。
+  * 结果是把 `t[j]` 的字符复制到 `s[i]`，然后两个下标都往后移一位。
+* `!= '\0'` → 检查刚复制的字符是不是 `'\0'`（字符串结束标志）。
+* 如果不是 `'\0'` → 循环继续，复制下一个字符。
+* 如果是 `'\0'` → 循环结束，完成追加。
+
+---
+
+## 6. `;`
+
+* 这是一个 **空语句**。
+* 因为 `while` 的循环体就一行，而且逻辑已经在条件里完成，所以写一个分号表示“循环体什么都不做”。
+* 实际循环体的动作就是条件里的“赋值 + 判断”。
+
+---
+
+## 总结
+
+1. **找到 s 的末尾**：
+
+   ```c
+   while (s[i] != '\0') i++;
+   ```
+2. **从 t 复制到 s 的末尾，直到 `'\0'` 为止**：
+
+   ```c
+   while ((s[i++] = t[j++]) != '\0');
+   ```
+
+最终效果：`t` 的内容被接到 `s` 后面，形成新的字符串。
+![](result.png)
+---
+
