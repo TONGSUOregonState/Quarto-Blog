@@ -1,0 +1,15 @@
+---
+title: "Data Structures with Python"
+listing:
+  contents: .
+  sort: "date desc"
+  type: default
+---
+
+# Python 数据结构笔记 🐍
+
+欢迎来到 Python 数据结构专区！这里分享常用容器实现与算法实践。
+
+## 文章
+
+[← 返回 Data Structures 首页](../index.qmd)

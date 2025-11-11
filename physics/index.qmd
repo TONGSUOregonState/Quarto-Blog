@@ -1,0 +1,15 @@
+---
+title: "Physics Notes"
+listing:
+  contents: .
+  sort: "date desc"
+  type: default
+---
+
+# 物理学习笔记 ⚛️
+
+欢迎来到物理专区！这里整理经典力学、电磁学等相关内容。
+
+## 文章
+
+[← 返回主页](../index.qmd)
