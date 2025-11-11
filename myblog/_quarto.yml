@@ -26,6 +26,10 @@ website:
         text: Digital Logic Design
       - href: data-structures/index.qmd
         text: Data Structures
+      - href: physics/index.qmd
+        text: Physics
+      - href: mathematics/index.qmd
+        text: Mathematics
       - href: updates.qmd
         text: 更新日志
       - href: about.qmd

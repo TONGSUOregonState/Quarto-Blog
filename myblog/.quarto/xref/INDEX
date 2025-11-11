@@ -82,5 +82,29 @@
   },
   "Digital-Logic-Design/index.qmd": {
     "index.html": "1757527a"
+  },
+  "data-structures/C/index.qmd": {
+    "index.html": "d1fcea9a"
+  },
+  "data-structures/C++/index.qmd": {
+    "index.html": "984d39d0"
+  },
+  "data-structures/Java/index.qmd": {
+    "index.html": "6640cb00"
+  },
+  "data-structures/python/index.qmd": {
+    "index.html": "d40495ff"
+  },
+  "mathematics/index.qmd": {
+    "index.html": "19cb7c1b"
+  },
+  "physics/index.qmd": {
+    "index.html": "180fb5a6"
+  },
+  "physics/optics/index.qmd": {
+    "index.html": "99b5eda0"
+  },
+  "physics/Quantum Mechanics/index.qmd": {
+    "index.html": "05482080"
   }
 }

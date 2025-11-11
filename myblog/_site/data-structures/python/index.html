@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-11-02">
 
-<title>Pointer – Tong Su’s Blog</title>
+<title>Data Structures with Python – Tong Su’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,62 +20,29 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a6e161b2431e1f94a14e0f5d32135a3c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-60d4398d82fec002ccec76571ed06d15.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-a6e161b2431e1f94a14e0f5d32135a3c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-60d4398d82fec002ccec76571ed06d15.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -104,9 +70,67 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<link rel="stylesheet" href="../styles.css">
+    const options = {
+      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: [],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -116,9 +140,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Tong Su’s Blog</span>
     </a>
   </div>
@@ -129,43 +153,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../matlab/index.html"> 
+    <a class="nav-link" href="../../matlab/index.html"> 
 <span class="menu-text">MATLAB</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../c-programming/index.html"> 
+    <a class="nav-link" href="../../c-programming/index.html"> 
 <span class="menu-text">C Programming</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../c-plus-plus/index.html"> 
+    <a class="nav-link" href="../../c-plus-plus/index.html"> 
 <span class="menu-text">C++</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../Digital-Logic-Design/index.html"> 
+    <a class="nav-link" href="../../Digital-Logic-Design/index.html"> 
 <span class="menu-text">Digital Logic Design</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../data-structures/index.html"> 
+    <a class="nav-link" href="../../data-structures/index.html"> 
 <span class="menu-text">Data Structures</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../physics/index.html"> 
+    <a class="nav-link" href="../../physics/index.html"> 
 <span class="menu-text">Physics</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../mathematics/index.html"> 
+    <a class="nav-link" href="../../mathematics/index.html"> 
 <span class="menu-text">Mathematics</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../updates.html"> 
+    <a class="nav-link" href="../../updates.html"> 
 <span class="menu-text">更新日志</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -191,11 +215,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#tom" id="toc-tom" class="nav-link active" data-scroll-target="#tom">2. <code>&amp;tom</code></a></li>
-  <li><a href="#p-tom" id="toc-p-tom" class="nav-link" data-scroll-target="#p-tom">3. <code>p = &amp;tom</code></a></li>
-  <li><a href="#p-的意思" id="toc-p-的意思" class="nav-link" data-scroll-target="#p-的意思">4. <code>*p</code> 的意思</a></li>
-  <li><a href="#和---的关系" id="toc-和---的关系" class="nav-link" data-scroll-target="#和---的关系">5. 和 <code>-&gt;</code> 的关系</a></li>
-  <li><a href="#总结一句" id="toc-总结一句" class="nav-link" data-scroll-target="#总结一句">✅ 总结一句</a></li>
+  <li><a href="#python-数据结构笔记" id="toc-python-数据结构笔记" class="nav-link active" data-scroll-target="#python-数据结构笔记">Python 数据结构笔记 🐍</a>
+  <ul class="collapse">
+  <li><a href="#文章" id="toc-文章" class="nav-link" data-scroll-target="#文章">文章</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -204,7 +227,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Pointer</h1>
+<h1 class="title">Data Structures with Python</h1>
 </div>
 
 
@@ -212,17 +235,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">2025-11-02</p>
-    </div>
-  </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2025-11-02</p>
+      <p class="date-modified">2025-11-11</p>
     </div>
   </div>
     
@@ -233,72 +250,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Person <span class="op">*</span>p<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>这一句是定义变量：</p>
-<ul>
-<li><code>p</code> 是一个变量。</li>
-<li><code>*p</code> 表示：<code>p</code> 是“指向 <code>Person</code> 的指针”。</li>
-</ul>
-<p>所以： 👉 <code>p</code> 本身是个指针变量，它里面存的是一个地址。 👉 这个地址必须是某个 <code>Person</code> 类型对象的地址。</p>
-<hr>
-<section id="tom" class="level2">
-<h2 class="anchored" data-anchor-id="tom">2. <code>&amp;tom</code></h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Person tom<span class="op">;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&amp;</span>tom<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li><code>tom</code> 是一个 <code>Person</code> 类型的结构体变量。</li>
-<li><code>&amp;tom</code> 表示“取 <code>tom</code> 的地址”。</li>
-<li><code>&amp;tom</code> 的类型是 <code>Person*</code>。</li>
-</ul>
-<p>这与 <code>p</code> 的类型刚好匹配。</p>
-<hr>
-</section>
-<section id="p-tom" class="level2">
-<h2 class="anchored" data-anchor-id="p-tom">3. <code>p = &amp;tom</code></h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="op">&amp;</span>tom<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>把 <code>tom</code> 的地址存进 <code>p</code>。结果是：<code>p</code> <strong>指向</strong> <code>tom</code>。</p>
-<p>内存可以想象成这样：</p>
-<pre><code>tom (类型 Person)          p (类型 Person*)
-+------------------+       +----------------+
-| name[32]         |       | 0x1000 (地址) |
-| age              |       +----------------+
-+------------------+
-      ^
-      |
-      +---- p 里面存的就是 tom 的地址 0x1000</code></pre>
-<hr>
-</section>
-<section id="p-的意思" class="level2">
-<h2 class="anchored" data-anchor-id="p-的意思">4. <code>*p</code> 的意思</h2>
-<ul>
-<li><code>p</code> 是一个指针，存了地址。</li>
-<li><code>*p</code> 表示“解引用”这个指针，找到它指向的对象”。</li>
-<li>所以 <code>*p</code> 的类型是 <code>Person</code>，等价于“<code>tom</code> 本身”。</li>
-</ul>
-<p>示例：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">(*</span>p<span class="op">).</span>age <span class="op">=</span> <span class="dv">20</span><span class="op">;</span>   <span class="co">// 相当于 tom.age = 20;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="和---的关系" class="level2">
-<h2 class="anchored" data-anchor-id="和---的关系">5. 和 <code>-&gt;</code> 的关系</h2>
-<p>因为 <code>(*p).age</code> 太啰嗦，C 提供简写：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>p<span class="op">-&gt;</span>age <span class="op">=</span> <span class="dv">20</span><span class="op">;</span>   <span class="co">// 等价于 (*p).age</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="总结一句" class="level2">
-<h2 class="anchored" data-anchor-id="总结一句">✅ 总结一句</h2>
-<ul>
-<li><code>p</code> 是个指针变量，里面存的是 <code>tom</code> 的地址。</li>
-<li><code>*p</code> 不是“指针”，而是“指针所指的对象”（即 <code>tom</code>）。</li>
-<li><code>&amp;tom</code> 是取 <code>tom</code> 的地址，正好能赋值给 <code>p</code>。</li>
-</ul>
-<p>```</p>
-<hr>
+<section id="python-数据结构笔记" class="level1">
+<h1>Python 数据结构笔记 🐍</h1>
+<p>欢迎来到 Python 数据结构专区！这里分享常用容器实现与算法实践。</p>
+<section id="文章" class="level2">
+<h2 class="anchored" data-anchor-id="文章">文章</h2>
+<p><a href="../../data-structures/index.html">← 返回 Data Structures 首页</a></p>
+
 
 
 </section>
+</section>
 
-</main> <!-- /main -->
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

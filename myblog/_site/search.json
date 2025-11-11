@@ -2,16 +2,58 @@
   {
     "objectID": "updates.html",
     "href": "updates.html",
-    "title": "更新日志 2025-11-02",
+    "title": "更新日志",
     "section": "",
-    "text": "今天没有新的提交。"
+    "text": "最后生成于：2025-11-11 03:20"
   },
   {
-    "objectID": "myblog/about.html",
-    "href": "myblog/about.html",
-    "title": "About",
+    "objectID": "updates.html#最近更新前-20-条",
+    "href": "updates.html#最近更新前-20-条",
+    "title": "更新日志",
+    "section": "最近更新（前 20 条）",
+    "text": "最近更新（前 20 条）\n\nOctober5thPractice — 2025-11-11 03:20\nindex — 2025-11-11 02:44\nindex — 2025-11-11 02:44\nindex — 2025-11-11 02:44\nindex — 2025-11-11 02:44\nsetCapacityFucntionIllustration — 2025-11-02 14:34\n53Stracatdemo — 2025-11-02 14:30\nindex — 2025-11-02 14:27\nindex — 2025-11-02 14:26\nindex — 2025-11-02 14:24\nCPointer — 2025-11-02 03:15\nindex — 2025-11-02 03:09\nLinkedlist — 2025-11-02 03:07\nHackerRank — 2025-11-02 03:06\nDynamicArray1 — 2025-11-02 03:05\nExample1 — 2025-10-12 19:25\ncode editor — 2025-10-11 01:05\npushbackcomplete — 2025-09-27 18:58\npushbackattempt — 2025-09-27 18:55\npushbackattempt2 — 2025-09-26 19:00"
+  },
+  {
+    "objectID": "physics/optics/index.html",
+    "href": "physics/optics/index.html",
+    "title": "Optics",
     "section": "",
-    "text": "About this site"
+    "text": "Welcome to the Optics section.\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "myblog/Linkedlist.html",
+    "href": "myblog/Linkedlist.html",
+    "title": "Linked List Demo",
+    "section": "",
+    "text": "```{.c} #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\n// … 这里粘贴完整的 Linkedlist.c 代码 … #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\ntypedef struct Node { char name[32]; struct Node *next; } Node;\n/* 在链表尾部插入 name，返回“新的尾结点” / Node push_back(Node last, const char name) { Node p = (Node)malloc(sizeof(Node)); if (!p) { perror(“malloc”); exit(1); }\nstrncpy(p-&gt;name, name, sizeof(p-&gt;name)-1);\np-&gt;name[sizeof(p-&gt;name)-1] = '\\0';\np-&gt;next = NULL;\n\nif (last) {               // 不是第一个节点：把它接在尾巴后\n    last-&gt;next = p;\n}\nreturn p;                 // 返回新的“尾结点”\n}\n/* 打印链表 / void print_list(Node head) { for (Node *cur = head; cur; cur = cur-&gt;next) { printf(“%s%s”, cur-&gt;name, cur-&gt;next ? ” -&gt; ” : ” -&gt; null“); } }\n/* 统计节点数 / int count(Node h) { int numberofnodes = 0; for (Node *p = h; p != NULL; p = p-&gt;next) { numberofnodes++; } return numberofnodes; }\nint main(void) { Node head = NULL; Node tail = NULL;\n// 构造图里的初始链表：Jacob -&gt; Joseph -&gt; Mary\ntail = push_back(NULL, \"Jacob\");  // 第一个节点\nhead = tail;                      // 记录头指针\ntail = push_back(tail, \"Joseph\"); // 接在尾部\ntail = push_back(tail, \"Mary\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\\n\", count(head));\n\n// 在末尾插入 Ann（对应 Fig. 3.6 第二行）\ntail = push_back(tail, \"Ann\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\", count(head));\n\nreturn 0;\n}"
+  },
+  {
+    "objectID": "myblog/Linkedlist.html#原始-c-程序",
+    "href": "myblog/Linkedlist.html#原始-c-程序",
+    "title": "Linked List Demo",
+    "section": "",
+    "text": "```{.c} #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\n// … 这里粘贴完整的 Linkedlist.c 代码 … #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\ntypedef struct Node { char name[32]; struct Node *next; } Node;\n/* 在链表尾部插入 name，返回“新的尾结点” / Node push_back(Node last, const char name) { Node p = (Node)malloc(sizeof(Node)); if (!p) { perror(“malloc”); exit(1); }\nstrncpy(p-&gt;name, name, sizeof(p-&gt;name)-1);\np-&gt;name[sizeof(p-&gt;name)-1] = '\\0';\np-&gt;next = NULL;\n\nif (last) {               // 不是第一个节点：把它接在尾巴后\n    last-&gt;next = p;\n}\nreturn p;                 // 返回新的“尾结点”\n}\n/* 打印链表 / void print_list(Node head) { for (Node *cur = head; cur; cur = cur-&gt;next) { printf(“%s%s”, cur-&gt;name, cur-&gt;next ? ” -&gt; ” : ” -&gt; null“); } }\n/* 统计节点数 / int count(Node h) { int numberofnodes = 0; for (Node *p = h; p != NULL; p = p-&gt;next) { numberofnodes++; } return numberofnodes; }\nint main(void) { Node head = NULL; Node tail = NULL;\n// 构造图里的初始链表：Jacob -&gt; Joseph -&gt; Mary\ntail = push_back(NULL, \"Jacob\");  // 第一个节点\nhead = tail;                      // 记录头指针\ntail = push_back(tail, \"Joseph\"); // 接在尾部\ntail = push_back(tail, \"Mary\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\\n\", count(head));\n\n// 在末尾插入 Ann（对应 Fig. 3.6 第二行）\ntail = push_back(tail, \"Ann\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\", count(head));\n\nreturn 0;\n}"
+  },
+  {
+    "objectID": "matlab/index.html",
+    "href": "matlab/index.html",
+    "title": "MATLAB Blog",
+    "section": "",
+    "text": "欢迎来到MATLAB专区！这里记录我的MATLAB学习笔记和项目经验。\n\n\n\n\n我的MATLAB项目实现和代码分析。\n← 返回主页"
+  },
+  {
+    "objectID": "matlab/index.html#文章",
+    "href": "matlab/index.html#文章",
+    "title": "MATLAB Blog",
+    "section": "",
+    "text": "我的MATLAB项目实现和代码分析。\n← 返回主页"
+  },
+  {
+    "objectID": "mathematics/index.html",
+    "href": "mathematics/index.html",
+    "title": "Mathematics",
+    "section": "",
+    "text": "Welcome to the Mathematics section.\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "Example1.html",
@@ -21,11 +63,39 @@
     "text": "For a demonstration of a line plot on a polar axis, see Figure 1.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
   },
   {
+    "objectID": "data-structures/python/index.html",
+    "href": "data-structures/python/index.html",
+    "title": "Data Structures with Python",
+    "section": "",
+    "text": "欢迎来到 Python 数据结构专区！这里分享常用容器实现与算法实践。\n\n\n← 返回 Data Structures 首页"
+  },
+  {
+    "objectID": "data-structures/python/index.html#文章",
+    "href": "data-structures/python/index.html#文章",
+    "title": "Data Structures with Python",
+    "section": "",
+    "text": "← 返回 Data Structures 首页"
+  },
+  {
     "objectID": "data-structures/index.html",
     "href": "data-structures/index.html",
     "title": "Data Structures",
     "section": "",
-    "text": "No matching items"
+    "text": "Data Structures with C\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Structures with C++\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Structures with Java\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Structures with Python\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "data-structures/C/index.html",
+    "href": "data-structures/C/index.html",
+    "title": "Data Structures with C",
+    "section": "",
+    "text": "欢迎来到 C 数据结构专区！这里记录指针、内存管理与常用数据结构实现。\n\n\n← 返回 Data Structures 首页"
+  },
+  {
+    "objectID": "data-structures/C/index.html#文章",
+    "href": "data-structures/C/index.html#文章",
+    "title": "Data Structures with C",
+    "section": "",
+    "text": "← 返回 Data Structures 首页"
   },
   {
     "objectID": "c-programming/pushbackcomplete.html",
@@ -256,7 +326,7 @@
     "href": "c-programming/index.html",
     "title": "C 语言编程博客",
     "section": "",
-    "text": "欢迎来到 C 语言编程专区！这里分享系统编程、算法实现相关内容。\n\n\n\n\n\n\n\n\n\nSolutions 5.3 Optimized Strcat.C\n\n\n\n\n\n\n\n\n2025-11-02\n\n\n\n\n\n\n\nPointer\n\n\n\n\n\n\n\n\n2025-11-02\n\n\n\n\n\n\n\nHackerRank C Solutions\n\n\n\n\n\n\n\n\n2025-11-02\n\n\n\n\n\n\n\nLinked list Program\n\n\n\n\n\n\n\n\n2025-11-02\n\n\n\n\n\n\n\nDynamic Array WS14\n\n\n\n\n\n\n\n\n2025-11-02\n\n\n\n\n\n\n\nHackerRank C Solutions\n\n\n\n\n\n\n\n\n2025-10-11\n\n\n\n\n\n\n\nUntitled\n\n\n\n\n\n\n\n\n2025-09-28\n\n\n\n\n\n\n\npushback complete program integer version\n\n\n\n\n\n\n\n\n2025-09-27\n\n\n\n\n\n\n\nLinkedlist Attempt,recitating push_back function , print function,\n\n\n\n\n\n\n\n\n2025-09-27\n\n\n\n\n\n\n\nLinkedlist Attempt,recitating push_back function , print function,\n\n\n\n\n\n\n\n\n2025-09-26\n\n\n\n\n\n\n\nSolutions 5.3 Optimized Strcat.C\n\n\n文章描述\n\n\n\n\n\n2024-01-15\n\n\n\n\n\nNo matching items"
+    "text": "欢迎来到 C 语言编程专区！这里分享系统编程、算法实现相关内容。\n\n\n\n\n\n\n\n\n\nHackerRank C Solutions\n\n\n\n\n\n\n\n\n2025-11-11\n\n\n\n\n\n\n\nUntitled\n\n\n\n\n\n\n\n\n2025-11-02\n\n\n\n\n\n\n\nSolutions 5.3 Optimized Strcat.C\n\n\n\n\n\n\n\n\n2025-11-02\n\n\n\n\n\n\n\nPointer\n\n\n\n\n\n\n\n\n2025-11-02\n\n\n\n\n\n\n\nLinked list Program\n\n\n\n\n\n\n\n\n2025-11-02\n\n\n\n\n\n\n\nDynamic Array WS14\n\n\n\n\n\n\n\n\n2025-11-02\n\n\n\n\n\n\n\nHackerRank C Solutions\n\n\n\n\n\n\n\n\n2025-10-11\n\n\n\n\n\n\n\npushback complete program integer version\n\n\n\n\n\n\n\n\n2025-09-27\n\n\n\n\n\n\n\nLinkedlist Attempt,recitating push_back function , print function,\n\n\n\n\n\n\n\n\n2025-09-27\n\n\n\n\n\n\n\nLinkedlist Attempt,recitating push_back function , print function,\n\n\n\n\n\n\n\n\n2025-09-26\n\n\n\n\n\n\n\nSolutions 5.3 Optimized Strcat.C\n\n\n文章描述\n\n\n\n\n\n2024-01-15\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "c-programming/October5thPractice.html",
@@ -308,6 +378,34 @@
     "text": "Below is the original dynArrayAdd function\nwhich we need to write a setCapacity function to be compactible with it\nvoid dynArrayAdd(struct dynArr *v, TYPE val) {  \n/* Check if a resize is necessary */  \nif(v-&gt;size &gt;= v-&gt;capacity)  \n_dynArraySetCapacity(v, 2 * v-&gt;capacity);  \nv-&gt;data[v-&gt;size] = val;  \nv-&gt;size++;  \n}"
   },
   {
+    "objectID": "data-structures/C++/index.html",
+    "href": "data-structures/C++/index.html",
+    "title": "Data Structures with C++",
+    "section": "",
+    "text": "欢迎来到 C++ 数据结构专区！这里分享 STL 容器、模板技巧与算法实践。\n\n\n← 返回 Data Structures 首页"
+  },
+  {
+    "objectID": "data-structures/C++/index.html#文章",
+    "href": "data-structures/C++/index.html#文章",
+    "title": "Data Structures with C++",
+    "section": "",
+    "text": "← 返回 Data Structures 首页"
+  },
+  {
+    "objectID": "data-structures/Java/index.html",
+    "href": "data-structures/Java/index.html",
+    "title": "Data Structures with Java",
+    "section": "",
+    "text": "欢迎来到 Java 数据结构专区！这里整理集合框架、算法模板与实践经验。\n\n\n← 返回 Data Structures 首页"
+  },
+  {
+    "objectID": "data-structures/Java/index.html#文章",
+    "href": "data-structures/Java/index.html#文章",
+    "title": "Data Structures with Java",
+    "section": "",
+    "text": "← 返回 Data Structures 首页"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Welcome to My Blog",
@@ -336,31 +434,24 @@
     "text": "🌐 GitHub: @TONGSUOregonState"
   },
   {
-    "objectID": "matlab/index.html",
-    "href": "matlab/index.html",
-    "title": "MATLAB Blog",
+    "objectID": "myblog/about.html",
+    "href": "myblog/about.html",
+    "title": "About",
     "section": "",
-    "text": "欢迎来到MATLAB专区！这里记录我的MATLAB学习笔记和项目经验。\n\n\n\n\n我的MATLAB项目实现和代码分析。\n← 返回主页"
+    "text": "About this site"
   },
   {
-    "objectID": "matlab/index.html#文章",
-    "href": "matlab/index.html#文章",
-    "title": "MATLAB Blog",
+    "objectID": "physics/index.html",
+    "href": "physics/index.html",
+    "title": "Physics",
     "section": "",
-    "text": "我的MATLAB项目实现和代码分析。\n← 返回主页"
+    "text": "Welcome to the Physics section.\n\n\n\n\n\n\n\n\n\nOptics\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuantum Mechanics\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "myblog/Linkedlist.html",
-    "href": "myblog/Linkedlist.html",
-    "title": "Linked List Demo",
+    "objectID": "physics/Quantum Mechanics/index.html",
+    "href": "physics/Quantum Mechanics/index.html",
+    "title": "Quantum Mechanics",
     "section": "",
-    "text": "```{.c} #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\n// … 这里粘贴完整的 Linkedlist.c 代码 … #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\ntypedef struct Node { char name[32]; struct Node *next; } Node;\n/* 在链表尾部插入 name，返回“新的尾结点” / Node push_back(Node last, const char name) { Node p = (Node)malloc(sizeof(Node)); if (!p) { perror(“malloc”); exit(1); }\nstrncpy(p-&gt;name, name, sizeof(p-&gt;name)-1);\np-&gt;name[sizeof(p-&gt;name)-1] = '\\0';\np-&gt;next = NULL;\n\nif (last) {               // 不是第一个节点：把它接在尾巴后\n    last-&gt;next = p;\n}\nreturn p;                 // 返回新的“尾结点”\n}\n/* 打印链表 / void print_list(Node head) { for (Node *cur = head; cur; cur = cur-&gt;next) { printf(“%s%s”, cur-&gt;name, cur-&gt;next ? ” -&gt; ” : ” -&gt; null“); } }\n/* 统计节点数 / int count(Node h) { int numberofnodes = 0; for (Node *p = h; p != NULL; p = p-&gt;next) { numberofnodes++; } return numberofnodes; }\nint main(void) { Node head = NULL; Node tail = NULL;\n// 构造图里的初始链表：Jacob -&gt; Joseph -&gt; Mary\ntail = push_back(NULL, \"Jacob\");  // 第一个节点\nhead = tail;                      // 记录头指针\ntail = push_back(tail, \"Joseph\"); // 接在尾部\ntail = push_back(tail, \"Mary\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\\n\", count(head));\n\n// 在末尾插入 Ann（对应 Fig. 3.6 第二行）\ntail = push_back(tail, \"Ann\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\", count(head));\n\nreturn 0;\n}"
-  },
-  {
-    "objectID": "myblog/Linkedlist.html#原始-c-程序",
-    "href": "myblog/Linkedlist.html#原始-c-程序",
-    "title": "Linked List Demo",
-    "section": "",
-    "text": "```{.c} #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\n// … 这里粘贴完整的 Linkedlist.c 代码 … #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\ntypedef struct Node { char name[32]; struct Node *next; } Node;\n/* 在链表尾部插入 name，返回“新的尾结点” / Node push_back(Node last, const char name) { Node p = (Node)malloc(sizeof(Node)); if (!p) { perror(“malloc”); exit(1); }\nstrncpy(p-&gt;name, name, sizeof(p-&gt;name)-1);\np-&gt;name[sizeof(p-&gt;name)-1] = '\\0';\np-&gt;next = NULL;\n\nif (last) {               // 不是第一个节点：把它接在尾巴后\n    last-&gt;next = p;\n}\nreturn p;                 // 返回新的“尾结点”\n}\n/* 打印链表 / void print_list(Node head) { for (Node *cur = head; cur; cur = cur-&gt;next) { printf(“%s%s”, cur-&gt;name, cur-&gt;next ? ” -&gt; ” : ” -&gt; null“); } }\n/* 统计节点数 / int count(Node h) { int numberofnodes = 0; for (Node *p = h; p != NULL; p = p-&gt;next) { numberofnodes++; } return numberofnodes; }\nint main(void) { Node head = NULL; Node tail = NULL;\n// 构造图里的初始链表：Jacob -&gt; Joseph -&gt; Mary\ntail = push_back(NULL, \"Jacob\");  // 第一个节点\nhead = tail;                      // 记录头指针\ntail = push_back(tail, \"Joseph\"); // 接在尾部\ntail = push_back(tail, \"Mary\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\\n\", count(head));\n\n// 在末尾插入 Ann（对应 Fig. 3.6 第二行）\ntail = push_back(tail, \"Ann\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\", count(head));\n\nreturn 0;\n}"
+    "text": "Welcome to the Quantum Mechanics section.\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]

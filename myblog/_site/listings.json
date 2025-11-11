@@ -1,22 +1,62 @@
 [
   {
+    "listing": "/physics/optics/index.html",
+    "items": []
+  },
+  {
+    "listing": "/mathematics/index.html",
+    "items": []
+  },
+  {
+    "listing": "/data-structures/python/index.html",
+    "items": []
+  },
+  {
     "listing": "/data-structures/index.html",
+    "items": [
+      "/data-structures/C/index.html",
+      "/data-structures/C++/index.html",
+      "/data-structures/Java/index.html",
+      "/data-structures/python/index.html"
+    ]
+  },
+  {
+    "listing": "/data-structures/C/index.html",
     "items": []
   },
   {
     "listing": "/c-programming/index.html",
     "items": [
+      "/c-programming/October5thPractice.html",
+      "/c-programming/setCapacityFucntionIllustration.html",
       "/c-programming/53Stracatdemo.html",
       "/c-programming/CPointer.html",
-      "/c-programming/October5thPractice.html",
       "/c-programming/Linkedlist.html",
       "/c-programming/DynamicArray1.html",
       "/c-programming/code editor.html",
-      "/c-programming/setCapacityFucntionIllustration.html",
       "/c-programming/pushbackcomplete.html",
       "/c-programming/pushbackattempt.html",
       "/c-programming/pushbackattempt2.html",
       "/c-programming/HackerRank.html"
     ]
+  },
+  {
+    "listing": "/data-structures/C++/index.html",
+    "items": []
+  },
+  {
+    "listing": "/data-structures/Java/index.html",
+    "items": []
+  },
+  {
+    "listing": "/physics/index.html",
+    "items": [
+      "/physics/optics/index.html",
+      "/physics/Quantum Mechanics/index.html"
+    ]
+  },
+  {
+    "listing": "/physics/Quantum Mechanics/index.html",
+    "items": []
   }
 ]

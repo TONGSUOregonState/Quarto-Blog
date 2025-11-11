@@ -1,0 +1,14 @@
+---
+title: "Quantum Mechanics"
+listing:
+  contents: .
+  sort: "date desc"
+  type: default
+  fields: [date, title, description]
+  date-format: "YYYY-MM-DD"
+
+page-layout: article
+---
+
+Welcome to the Quantum Mechanics section.
+

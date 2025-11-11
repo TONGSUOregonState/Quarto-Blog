@@ -1,5 +1,30 @@
 ---
-title: "更新日志 2025-11-02"
+title: "更新日志"
+freeze: false
+format: html
 ---
 
-- 今天没有新的提交。
+*最后生成于：2025-11-11 03:20*
+
+## 最近更新（前 20 条）
+
+- **[October5thPractice](/c-programming/October5thPractice.html)** — 2025-11-11 03:20
+- **[index](/data-structures/Java/index.html)** — 2025-11-11 02:44
+- **[index](/data-structures/python/index.html)** — 2025-11-11 02:44
+- **[index](/data-structures/C/index.html)** — 2025-11-11 02:44
+- **[index](/data-structures/C++/index.html)** — 2025-11-11 02:44
+- **[setCapacityFucntionIllustration](/c-programming/setCapacityFucntionIllustration.html)** — 2025-11-02 14:34
+- **[53Stracatdemo](/c-programming/53Stracatdemo.html)** — 2025-11-02 14:30
+- **[index](/data-structures/index.html)** — 2025-11-02 14:27
+- **[index](/Digital-Logic-Design/index.html)** — 2025-11-02 14:26
+- **[index](/c-plus-plus/index.html)** — 2025-11-02 14:24
+- **[CPointer](/c-programming/CPointer.html)** — 2025-11-02 03:15
+- **[index](/c-programming/index.html)** — 2025-11-02 03:09
+- **[Linkedlist](/c-programming/Linkedlist.html)** — 2025-11-02 03:07
+- **[HackerRank](/c-programming/HackerRank.html)** — 2025-11-02 03:06
+- **[DynamicArray1](/c-programming/DynamicArray1.html)** — 2025-11-02 03:05
+- **[Example1](/matlab/Example1.html)** — 2025-10-12 19:25
+- **[code editor](/c-programming/code editor.html)** — 2025-10-11 01:05
+- **[pushbackcomplete](/c-programming/pushbackcomplete.html)** — 2025-09-27 18:58
+- **[pushbackattempt](/c-programming/pushbackattempt.html)** — 2025-09-27 18:55
+- **[pushbackattempt2](/c-programming/pushbackattempt2.html)** — 2025-09-26 19:00
