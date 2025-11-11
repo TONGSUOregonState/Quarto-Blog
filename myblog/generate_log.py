@@ -13,6 +13,8 @@ WATCH_DIRS = [
     ROOT / "c-plus-plus",
     ROOT / "Digital-Logic-Design",
     ROOT / "data-structures",
+    ROOT / "physics",
+    ROOT / "mathematics",
 ]
 
 def iter_qmd_files():
@@ -40,7 +42,7 @@ lines.append("---\n")
 lines.append(f"*最后生成于：{now}*\n")
 
 lines.append("## 最近更新（前 20 条）\n")
-for p in files[:20]:
+for p in files:
     mtime = datetime.fromtimestamp(p.stat().st_mtime).strftime("%Y-%m-%d %H:%M")
     url = "/" + rel(p).replace(".qmd", ".html")  # 简单推 URL
     title = p.stem.replace("-", " ")
