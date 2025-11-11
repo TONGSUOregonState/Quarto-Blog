@@ -1,5 +1,13 @@
 [
   {
+    "listing": "/physics/optics/index.html",
+    "items": []
+  },
+  {
+    "listing": "/mathematics/index.html",
+    "items": []
+  },
+  {
     "listing": "/data-structures/python/index.html",
     "items": []
   },
@@ -38,6 +46,17 @@
   },
   {
     "listing": "/data-structures/Java/index.html",
+    "items": []
+  },
+  {
+    "listing": "/physics/index.html",
+    "items": [
+      "/physics/optics/index.html",
+      "/physics/Quantum Mechanics/index.html"
+    ]
+  },
+  {
+    "listing": "/physics/Quantum Mechanics/index.html",
     "items": []
   }
 ]

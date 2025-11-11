@@ -4,7 +4,7 @@
     "href": "updates.html",
     "title": "更新日志",
     "section": "",
-    "text": "最后生成于：2025-11-11 03:10"
+    "text": "最后生成于：2025-11-11 03:13"
   },
   {
     "objectID": "updates.html#最近更新前-20-条",
@@ -14,11 +14,46 @@
     "text": "最近更新（前 20 条）\n\nindex — 2025-11-11 02:44\nindex — 2025-11-11 02:44\nindex — 2025-11-11 02:44\nindex — 2025-11-11 02:44\nsetCapacityFucntionIllustration — 2025-11-02 14:34\n53Stracatdemo — 2025-11-02 14:30\nindex — 2025-11-02 14:27\nindex — 2025-11-02 14:26\nindex — 2025-11-02 14:24\nCPointer — 2025-11-02 03:15\nindex — 2025-11-02 03:09\nOctober5thPractice — 2025-11-02 03:08\nLinkedlist — 2025-11-02 03:07\nHackerRank — 2025-11-02 03:06\nDynamicArray1 — 2025-11-02 03:05\nExample1 — 2025-10-12 19:25\ncode editor — 2025-10-11 01:05\npushbackcomplete — 2025-09-27 18:58\npushbackattempt — 2025-09-27 18:55\npushbackattempt2 — 2025-09-26 19:00"
   },
   {
-    "objectID": "myblog/about.html",
-    "href": "myblog/about.html",
-    "title": "About",
+    "objectID": "physics/optics/index.html",
+    "href": "physics/optics/index.html",
+    "title": "Optics",
     "section": "",
-    "text": "About this site"
+    "text": "Welcome to the Optics section.\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "myblog/Linkedlist.html",
+    "href": "myblog/Linkedlist.html",
+    "title": "Linked List Demo",
+    "section": "",
+    "text": "```{.c} #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\n// … 这里粘贴完整的 Linkedlist.c 代码 … #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\ntypedef struct Node { char name[32]; struct Node *next; } Node;\n/* 在链表尾部插入 name，返回“新的尾结点” / Node push_back(Node last, const char name) { Node p = (Node)malloc(sizeof(Node)); if (!p) { perror(“malloc”); exit(1); }\nstrncpy(p-&gt;name, name, sizeof(p-&gt;name)-1);\np-&gt;name[sizeof(p-&gt;name)-1] = '\\0';\np-&gt;next = NULL;\n\nif (last) {               // 不是第一个节点：把它接在尾巴后\n    last-&gt;next = p;\n}\nreturn p;                 // 返回新的“尾结点”\n}\n/* 打印链表 / void print_list(Node head) { for (Node *cur = head; cur; cur = cur-&gt;next) { printf(“%s%s”, cur-&gt;name, cur-&gt;next ? ” -&gt; ” : ” -&gt; null“); } }\n/* 统计节点数 / int count(Node h) { int numberofnodes = 0; for (Node *p = h; p != NULL; p = p-&gt;next) { numberofnodes++; } return numberofnodes; }\nint main(void) { Node head = NULL; Node tail = NULL;\n// 构造图里的初始链表：Jacob -&gt; Joseph -&gt; Mary\ntail = push_back(NULL, \"Jacob\");  // 第一个节点\nhead = tail;                      // 记录头指针\ntail = push_back(tail, \"Joseph\"); // 接在尾部\ntail = push_back(tail, \"Mary\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\\n\", count(head));\n\n// 在末尾插入 Ann（对应 Fig. 3.6 第二行）\ntail = push_back(tail, \"Ann\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\", count(head));\n\nreturn 0;\n}"
+  },
+  {
+    "objectID": "myblog/Linkedlist.html#原始-c-程序",
+    "href": "myblog/Linkedlist.html#原始-c-程序",
+    "title": "Linked List Demo",
+    "section": "",
+    "text": "```{.c} #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\n// … 这里粘贴完整的 Linkedlist.c 代码 … #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\ntypedef struct Node { char name[32]; struct Node *next; } Node;\n/* 在链表尾部插入 name，返回“新的尾结点” / Node push_back(Node last, const char name) { Node p = (Node)malloc(sizeof(Node)); if (!p) { perror(“malloc”); exit(1); }\nstrncpy(p-&gt;name, name, sizeof(p-&gt;name)-1);\np-&gt;name[sizeof(p-&gt;name)-1] = '\\0';\np-&gt;next = NULL;\n\nif (last) {               // 不是第一个节点：把它接在尾巴后\n    last-&gt;next = p;\n}\nreturn p;                 // 返回新的“尾结点”\n}\n/* 打印链表 / void print_list(Node head) { for (Node *cur = head; cur; cur = cur-&gt;next) { printf(“%s%s”, cur-&gt;name, cur-&gt;next ? ” -&gt; ” : ” -&gt; null“); } }\n/* 统计节点数 / int count(Node h) { int numberofnodes = 0; for (Node *p = h; p != NULL; p = p-&gt;next) { numberofnodes++; } return numberofnodes; }\nint main(void) { Node head = NULL; Node tail = NULL;\n// 构造图里的初始链表：Jacob -&gt; Joseph -&gt; Mary\ntail = push_back(NULL, \"Jacob\");  // 第一个节点\nhead = tail;                      // 记录头指针\ntail = push_back(tail, \"Joseph\"); // 接在尾部\ntail = push_back(tail, \"Mary\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\\n\", count(head));\n\n// 在末尾插入 Ann（对应 Fig. 3.6 第二行）\ntail = push_back(tail, \"Ann\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\", count(head));\n\nreturn 0;\n}"
+  },
+  {
+    "objectID": "matlab/index.html",
+    "href": "matlab/index.html",
+    "title": "MATLAB Blog",
+    "section": "",
+    "text": "欢迎来到MATLAB专区！这里记录我的MATLAB学习笔记和项目经验。\n\n\n\n\n我的MATLAB项目实现和代码分析。\n← 返回主页"
+  },
+  {
+    "objectID": "matlab/index.html#文章",
+    "href": "matlab/index.html#文章",
+    "title": "MATLAB Blog",
+    "section": "",
+    "text": "我的MATLAB项目实现和代码分析。\n← 返回主页"
+  },
+  {
+    "objectID": "mathematics/index.html",
+    "href": "mathematics/index.html",
+    "title": "Mathematics",
+    "section": "",
+    "text": "Welcome to the Mathematics section.\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "Example1.html",
@@ -399,31 +434,24 @@
     "text": "🌐 GitHub: @TONGSUOregonState"
   },
   {
-    "objectID": "matlab/index.html",
-    "href": "matlab/index.html",
-    "title": "MATLAB Blog",
+    "objectID": "myblog/about.html",
+    "href": "myblog/about.html",
+    "title": "About",
     "section": "",
-    "text": "欢迎来到MATLAB专区！这里记录我的MATLAB学习笔记和项目经验。\n\n\n\n\n我的MATLAB项目实现和代码分析。\n← 返回主页"
+    "text": "About this site"
   },
   {
-    "objectID": "matlab/index.html#文章",
-    "href": "matlab/index.html#文章",
-    "title": "MATLAB Blog",
+    "objectID": "physics/index.html",
+    "href": "physics/index.html",
+    "title": "Physics",
     "section": "",
-    "text": "我的MATLAB项目实现和代码分析。\n← 返回主页"
+    "text": "Welcome to the Physics section.\n\n\n\n\n\n\n\n\n\nOptics\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuantum Mechanics\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "myblog/Linkedlist.html",
-    "href": "myblog/Linkedlist.html",
-    "title": "Linked List Demo",
+    "objectID": "physics/Quantum Mechanics/index.html",
+    "href": "physics/Quantum Mechanics/index.html",
+    "title": "Quantum Mechanics",
     "section": "",
-    "text": "```{.c} #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\n// … 这里粘贴完整的 Linkedlist.c 代码 … #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\ntypedef struct Node { char name[32]; struct Node *next; } Node;\n/* 在链表尾部插入 name，返回“新的尾结点” / Node push_back(Node last, const char name) { Node p = (Node)malloc(sizeof(Node)); if (!p) { perror(“malloc”); exit(1); }\nstrncpy(p-&gt;name, name, sizeof(p-&gt;name)-1);\np-&gt;name[sizeof(p-&gt;name)-1] = '\\0';\np-&gt;next = NULL;\n\nif (last) {               // 不是第一个节点：把它接在尾巴后\n    last-&gt;next = p;\n}\nreturn p;                 // 返回新的“尾结点”\n}\n/* 打印链表 / void print_list(Node head) { for (Node *cur = head; cur; cur = cur-&gt;next) { printf(“%s%s”, cur-&gt;name, cur-&gt;next ? ” -&gt; ” : ” -&gt; null“); } }\n/* 统计节点数 / int count(Node h) { int numberofnodes = 0; for (Node *p = h; p != NULL; p = p-&gt;next) { numberofnodes++; } return numberofnodes; }\nint main(void) { Node head = NULL; Node tail = NULL;\n// 构造图里的初始链表：Jacob -&gt; Joseph -&gt; Mary\ntail = push_back(NULL, \"Jacob\");  // 第一个节点\nhead = tail;                      // 记录头指针\ntail = push_back(tail, \"Joseph\"); // 接在尾部\ntail = push_back(tail, \"Mary\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\\n\", count(head));\n\n// 在末尾插入 Ann（对应 Fig. 3.6 第二行）\ntail = push_back(tail, \"Ann\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\", count(head));\n\nreturn 0;\n}"
-  },
-  {
-    "objectID": "myblog/Linkedlist.html#原始-c-程序",
-    "href": "myblog/Linkedlist.html#原始-c-程序",
-    "title": "Linked List Demo",
-    "section": "",
-    "text": "```{.c} #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\n// … 这里粘贴完整的 Linkedlist.c 代码 … #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\ntypedef struct Node { char name[32]; struct Node *next; } Node;\n/* 在链表尾部插入 name，返回“新的尾结点” / Node push_back(Node last, const char name) { Node p = (Node)malloc(sizeof(Node)); if (!p) { perror(“malloc”); exit(1); }\nstrncpy(p-&gt;name, name, sizeof(p-&gt;name)-1);\np-&gt;name[sizeof(p-&gt;name)-1] = '\\0';\np-&gt;next = NULL;\n\nif (last) {               // 不是第一个节点：把它接在尾巴后\n    last-&gt;next = p;\n}\nreturn p;                 // 返回新的“尾结点”\n}\n/* 打印链表 / void print_list(Node head) { for (Node *cur = head; cur; cur = cur-&gt;next) { printf(“%s%s”, cur-&gt;name, cur-&gt;next ? ” -&gt; ” : ” -&gt; null“); } }\n/* 统计节点数 / int count(Node h) { int numberofnodes = 0; for (Node *p = h; p != NULL; p = p-&gt;next) { numberofnodes++; } return numberofnodes; }\nint main(void) { Node head = NULL; Node tail = NULL;\n// 构造图里的初始链表：Jacob -&gt; Joseph -&gt; Mary\ntail = push_back(NULL, \"Jacob\");  // 第一个节点\nhead = tail;                      // 记录头指针\ntail = push_back(tail, \"Joseph\"); // 接在尾部\ntail = push_back(tail, \"Mary\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\\n\", count(head));\n\n// 在末尾插入 Ann（对应 Fig. 3.6 第二行）\ntail = push_back(tail, \"Ann\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\", count(head));\n\nreturn 0;\n}"
+    "text": "Welcome to the Quantum Mechanics section.\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
