@@ -1,45 +1,66 @@
 [
   {
-    "objectID": "matlab/index.html",
-    "href": "matlab/index.html",
-    "title": "MATLAB Blog",
+    "objectID": "updates.html",
+    "href": "updates.html",
+    "title": "更新日志",
     "section": "",
-    "text": "欢迎来到MATLAB专区！这里记录我的MATLAB学习笔记和项目经验。\n\n\n\n\n我的MATLAB项目实现和代码分析。\n← 返回主页"
+    "text": "最后生成于：2025-11-11 03:10"
   },
   {
-    "objectID": "matlab/index.html#文章",
-    "href": "matlab/index.html#文章",
-    "title": "MATLAB Blog",
-    "section": "",
-    "text": "我的MATLAB项目实现和代码分析。\n← 返回主页"
+    "objectID": "updates.html#最近更新前-20-条",
+    "href": "updates.html#最近更新前-20-条",
+    "title": "更新日志",
+    "section": "最近更新（前 20 条）",
+    "text": "最近更新（前 20 条）\n\nindex — 2025-11-11 02:44\nindex — 2025-11-11 02:44\nindex — 2025-11-11 02:44\nindex — 2025-11-11 02:44\nsetCapacityFucntionIllustration — 2025-11-02 14:34\n53Stracatdemo — 2025-11-02 14:30\nindex — 2025-11-02 14:27\nindex — 2025-11-02 14:26\nindex — 2025-11-02 14:24\nCPointer — 2025-11-02 03:15\nindex — 2025-11-02 03:09\nOctober5thPractice — 2025-11-02 03:08\nLinkedlist — 2025-11-02 03:07\nHackerRank — 2025-11-02 03:06\nDynamicArray1 — 2025-11-02 03:05\nExample1 — 2025-10-12 19:25\ncode editor — 2025-10-11 01:05\npushbackcomplete — 2025-09-27 18:58\npushbackattempt — 2025-09-27 18:55\npushbackattempt2 — 2025-09-26 19:00"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to My Blog",
+    "objectID": "myblog/about.html",
+    "href": "myblog/about.html",
+    "title": "About",
     "section": "",
-    "text": "This is my first Quarto website. Here I can publish notes, code, and experiments.\n\n\n\n\n\n\n\n\n\n\nC programming Modern Approach\nC solutions\nThe C answer book\nlogic circuit visualizer DigitalJS\n\n\n\n\n\nBuilt with Quarto\nPublished on Quarto Pub\n\nSource code available on GitHub\n\n\n\n\n\n🌐 GitHub: @TONGSUOregonState"
+    "text": "About this site"
   },
   {
-    "objectID": "index.html#博客分类",
-    "href": "index.html#博客分类",
-    "title": "Welcome to My Blog",
+    "objectID": "Example1.html",
+    "href": "Example1.html",
+    "title": "Quarto Basics",
     "section": "",
-    "text": "C programming Modern Approach\nC solutions\nThe C answer book\nlogic circuit visualizer DigitalJS\n\n\n\n\n\nBuilt with Quarto\nPublished on Quarto Pub\n\nSource code available on GitHub\n\n\n\n\n\n🌐 GitHub: @TONGSUOregonState"
+    "text": "For a demonstration of a line plot on a polar axis, see Figure 1.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
   },
   {
-    "objectID": "index.html#about-this-site",
-    "href": "index.html#about-this-site",
-    "title": "Welcome to My Blog",
+    "objectID": "data-structures/python/index.html",
+    "href": "data-structures/python/index.html",
+    "title": "Data Structures with Python",
     "section": "",
-    "text": "Built with Quarto\nPublished on Quarto Pub\n\nSource code available on GitHub"
+    "text": "欢迎来到 Python 数据结构专区！这里分享常用容器实现与算法实践。\n\n\n← 返回 Data Structures 首页"
   },
   {
-    "objectID": "index.html#联系方式-contact",
-    "href": "index.html#联系方式-contact",
-    "title": "Welcome to My Blog",
+    "objectID": "data-structures/python/index.html#文章",
+    "href": "data-structures/python/index.html#文章",
+    "title": "Data Structures with Python",
     "section": "",
-    "text": "🌐 GitHub: @TONGSUOregonState"
+    "text": "← 返回 Data Structures 首页"
+  },
+  {
+    "objectID": "data-structures/index.html",
+    "href": "data-structures/index.html",
+    "title": "Data Structures",
+    "section": "",
+    "text": "Data Structures with C\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Structures with C++\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Structures with Java\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Structures with Python\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "data-structures/C/index.html",
+    "href": "data-structures/C/index.html",
+    "title": "Data Structures with C",
+    "section": "",
+    "text": "欢迎来到 C 数据结构专区！这里记录指针、内存管理与常用数据结构实现。\n\n\n← 返回 Data Structures 首页"
+  },
+  {
+    "objectID": "data-structures/C/index.html#文章",
+    "href": "data-structures/C/index.html#文章",
+    "title": "Data Structures with C",
+    "section": "",
+    "text": "← 返回 Data Structures 首页"
   },
   {
     "objectID": "c-programming/pushbackcomplete.html",
@@ -105,32 +126,60 @@
     "text": "预期输出\nJacob -&gt; Joseph -&gt; Mary -&gt; null\nThis linked list has 3 nodes.\n\nJacob -&gt; Joseph -&gt; Mary -&gt; Ann -&gt; null\nThis linked list has 4 nodes.\n---\ntitle: \"逐行解析：main 程序\"\nformat: html\n---\n\n## 程序代码与逐行解释\n\n```c\nint main(void) {\n👉 程序入口函数，返回类型是 int，参数为空（void 表示 main 不接收命令行参数）。\n\n    Node *head = NULL, *tail = NULL;\n👉 定义两个指向 Node 的指针变量：\n\nhead：指向链表的头结点（第一个结点）。\ntail：指向链表的尾结点（最后一个结点）。 一开始它们都设为 NULL，表示链表还没有任何节点。\n\n\n    tail = push_back(NULL, \"Jacob\"); head = tail;\n👉 调用 push_back 在一个空链表中插入 \"Jacob\" 节点。\n\n返回的新节点地址赋给 tail（即尾结点）。\n同时因为这是第一个节点，所以 head = tail，链表的头和尾都指向这个新节点。\n\n\n    tail = push_back(tail, \"Joseph\");\n👉 在当前尾结点 \"Jacob\" 后面插入 \"Joseph\" 节点。 push_back 会返回新的尾结点 \"Joseph\"，赋值给 tail。 现在链表是：\nJacob -&gt; Joseph\n\n    tail = push_back(tail, \"Mary\");\n👉 在 \"Joseph\" 后面插入 \"Mary\" 节点。 返回的新尾结点 \"Mary\" 存入 tail。 链表变为：\nJacob -&gt; Joseph -&gt; Mary\n\n    print_list(head);\n👉 从 head 开始遍历链表，把链表所有节点的 name 打印出来。 输出类似：\nJacob -&gt; Joseph -&gt; Mary\n\n    printf(\"This linked list has %d nodes.\\n\\n\", count(head));\n👉 调用 count(head) 来统计链表中节点的个数，然后输出结果。 这时链表有 3 个节点，输出：\nThis linked list has 3 nodes.\n\n    tail = push_back(tail, \"Ann\");\n👉 在 \"Mary\" 后面插入 \"Ann\" 节点，tail 更新为 \"Ann\"。 链表变为：\nJacob -&gt; Joseph -&gt; Mary -&gt; Ann\n\n    print_list(head);\n👉 再次打印整个链表：\nJacob -&gt; Joseph -&gt; Mary -&gt; Ann\n\n    printf(\"This linked list has %d nodes.\\n\", count(head));\n👉 再次统计并输出节点数量，这次是 4：\nThis linked list has 4 nodes.\n\n    return 0;\n}\n👉 返回 0，表示程序正常结束。\n\n---\n\n要不要我帮你加一个 **示意图**（head、tail 每一步指向情况）放在 qmd 里？这样渲染后不仅有文字解释，还能直观看链表结构。"
   },
   {
-    "objectID": "c-programming/DynamicArray1.html",
-    "href": "c-programming/DynamicArray1.html",
-    "title": "Dynamic Array WS14",
+    "objectID": "c-programming/HackerRank.html",
+    "href": "c-programming/HackerRank.html",
+    "title": "Solutions 5.3 Optimized Strcat.C",
     "section": "",
-    "text": "#include &lt;stdio.h&gt;\n#include &lt;stdlib.h&gt;\n#include &lt;assert.h&gt;\n\n#ifndef TYPE\n#define TYPE double\n#endif\n\nstruct dynArr {\n    TYPE *data;     /* pointer to the data array */\n    int size;       /* number of elements in the array */\n    int capacity;   /* capacity of the data array */\n};\n\nvoid dynArrayInit(struct dynArr *v, int capacity) {\n    v-&gt;data = (TYPE *) malloc(sizeof(TYPE) * capacity);\n    assert(v-&gt;data != 0);\n    v-&gt;size = 0;\n    v-&gt;capacity = capacity;\n}\n\nvoid dynArrayFree(struct dynArr *v) {\n    if(v-&gt;data != 0) {\n        free(v-&gt;data);  /* free memory space */\n        v-&gt;data = 0;    /* make it point to NULL */\n    }\n    v-&gt;size = 0;\n    v-&gt;capacity = 0;\n}\n\nint dynArraySize(struct dynArr *v) {\n    return v-&gt;size;\n}\n\nvoid _dynArraySetCapacity(struct dynArr *v, int newCapacity) {\n    assert(newCapacity &gt; 0);\n\n    printf(\"⚙️ Resizing array: old capacity = %d, new capacity = %d\\n\",\n           v-&gt;capacity, newCapacity);\n\n    if (newCapacity &lt; v-&gt;size) {\n        v-&gt;size = newCapacity; /* 截断已有元素，防止越界 */\n    }\n    TYPE *newData = (TYPE *) malloc(sizeof(TYPE) * newCapacity);\n    assert(newData != 0);\n\n    for (int i = 0; i &lt; v-&gt;size; ++i) {\n        newData[i] = v-&gt;data[i];\n    }\n\n    free(v-&gt;data);\n    v-&gt;data = newData;\n    v-&gt;capacity = newCapacity;\n}\n\nvoid dynArrayAdd(struct dynArr *v, TYPE val) {\n    /* Check if a resize is necessary */\n    if(v-&gt;size &gt;= v-&gt;capacity)\n        _dynArraySetCapacity(v, 2 * v-&gt;capacity);\n    v-&gt;data[v-&gt;size] = val;\n    v-&gt;size++;\n}\n\n/* ---------- 演示用 main 函数 ---------- */\nint main() {\n    struct dynArr arr;\n    dynArrayInit(&arr, 2);  // 初始容量设为 2\n    printf(\"Initial capacity: %d\\n\", arr.capacity);\n\n    // 连续插入多个元素，触发扩容\n    for (int i = 0; i &lt; 10; i++) {\n        dynArrayAdd(&arr, i * 1.1);  // 插入 i*1.1\n        printf(\"Added %.1f | size = %d, capacity = %d\\n\",\n               arr.data[arr.size-1], arr.size, arr.capacity);\n    }\n\n    // 打印数组内容\n    printf(\"Final array: [\");\n    for (int i = 0; i &lt; arr.size; i++) {\n        printf(\"%.1f\", arr.data[i]);\n        if (i &lt; arr.size-1) printf(\", \");\n    }\n    printf(\"]\\n\");\n\n    dynArrayFree(&arr);\n    return 0;\n}"
+    "text": "#include &lt;cmath&gt;\n#include &lt;cstdio&gt;\n#include &lt;vector&gt;\n#include &lt;iostream&gt;\n#include &lt;algorithm&gt;\nusing namespace std;\n\n\nclass Triangle{\n    public:\n        void triangle(){\n            cout&lt;&lt;\"I am a triangle\\n\";\n        }\n};\n\nclass Isosceles : public Triangle{\n    public:\n        void isosceles(){\n            cout&lt;&lt;\"I am an isosceles triangle\\n\";\n        }\n        //Write your code here.\n};\n\nint main(){\n    Isosceles isc;\n    isc.isosceles();\n    isc.description();\n    isc.triangle();\n    return 0;\n}"
   },
   {
-    "objectID": "c-programming/DynamicArray1.html#output",
-    "href": "c-programming/DynamicArray1.html#output",
-    "title": "Dynamic Array WS14",
-    "section": "Output",
-    "text": "Output\nInitial capacity: 2\nAdded 0.0 | size = 1, capacity = 2\nAdded 1.1 | size = 2, capacity = 2\n⚙️ Resizing array: old capacity = 2, new capacity = 4\nAdded 2.2 | size = 3, capacity = 4\nAdded 3.3 | size = 4, capacity = 4\n⚙️ Resizing array: old capacity = 4, new capacity = 8\nAdded 4.4 | size = 5, capacity = 8\nAdded 5.5 | size = 6, capacity = 8\nAdded 6.6 | size = 7, capacity = 8\nAdded 7.7 | size = 8, capacity = 8\n⚙️ Resizing array: old capacity = 8, new capacity = 16\nAdded 8.8 | size = 9, capacity = 16\nAdded 9.9 | size = 10, capacity = 16\nFinal array: [0.0, 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9]\n=== Code Execution Successful ==="
-  },
-  {
-    "objectID": "c-programming/DynamicArray1.html#note",
-    "href": "c-programming/DynamicArray1.html#note",
-    "title": "Dynamic Array WS14",
-    "section": "Note",
-    "text": "Note\nIn C, the compiler cannot identify whether the result would exceed maximum memory location of the array. Thus we need the dynamic array"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "c-programming/HackerRank.html#hackerrank-problem",
+    "href": "c-programming/HackerRank.html#hackerrank-problem",
+    "title": "Solutions 5.3 Optimized Strcat.C",
     "section": "",
-    "text": "About this site"
+    "text": "#include &lt;cmath&gt;\n#include &lt;cstdio&gt;\n#include &lt;vector&gt;\n#include &lt;iostream&gt;\n#include &lt;algorithm&gt;\nusing namespace std;\n\n\nclass Triangle{\n    public:\n        void triangle(){\n            cout&lt;&lt;\"I am a triangle\\n\";\n        }\n};\n\nclass Isosceles : public Triangle{\n    public:\n        void isosceles(){\n            cout&lt;&lt;\"I am an isosceles triangle\\n\";\n        }\n        //Write your code here.\n};\n\nint main(){\n    Isosceles isc;\n    isc.isosceles();\n    isc.description();\n    isc.triangle();\n    return 0;\n}"
+  },
+  {
+    "objectID": "c-programming/CPointer.html",
+    "href": "c-programming/CPointer.html",
+    "title": "Pointer",
+    "section": "",
+    "text": "Person *p;\n这一句是定义变量：\n所以： 👉 p 本身是个指针变量，它里面存的是一个地址。 👉 这个地址必须是某个 Person 类型对象的地址。"
+  },
+  {
+    "objectID": "c-programming/CPointer.html#tom",
+    "href": "c-programming/CPointer.html#tom",
+    "title": "Pointer",
+    "section": "2. &tom",
+    "text": "2. &tom\nPerson tom;\n&tom;\n\ntom 是一个 Person 类型的结构体变量。\n&tom 表示“取 tom 的地址”。\n&tom 的类型是 Person*。\n\n这与 p 的类型刚好匹配。"
+  },
+  {
+    "objectID": "c-programming/CPointer.html#p-tom",
+    "href": "c-programming/CPointer.html#p-tom",
+    "title": "Pointer",
+    "section": "3. p = &tom",
+    "text": "3. p = &tom\np = &tom;\n把 tom 的地址存进 p。结果是：p 指向 tom。\n内存可以想象成这样：\ntom (类型 Person)          p (类型 Person*)\n+------------------+       +----------------+\n| name[32]         |       | 0x1000 (地址) |\n| age              |       +----------------+\n+------------------+\n      ^\n      |\n      +---- p 里面存的就是 tom 的地址 0x1000"
+  },
+  {
+    "objectID": "c-programming/CPointer.html#p-的意思",
+    "href": "c-programming/CPointer.html#p-的意思",
+    "title": "Pointer",
+    "section": "4. *p 的意思",
+    "text": "4. *p 的意思\n\np 是一个指针，存了地址。\n*p 表示“解引用”这个指针，找到它指向的对象”。\n所以 *p 的类型是 Person，等价于“tom 本身”。\n\n示例：\n(*p).age = 20;   // 相当于 tom.age = 20;"
+  },
+  {
+    "objectID": "c-programming/CPointer.html#和---的关系",
+    "href": "c-programming/CPointer.html#和---的关系",
+    "title": "Pointer",
+    "section": "5. 和 -> 的关系",
+    "text": "5. 和 -&gt; 的关系\n因为 (*p).age 太啰嗦，C 提供简写：\np-&gt;age = 20;   // 等价于 (*p).age"
+  },
+  {
+    "objectID": "c-programming/CPointer.html#总结一句",
+    "href": "c-programming/CPointer.html#总结一句",
+    "title": "Pointer",
+    "section": "✅ 总结一句",
+    "text": "✅ 总结一句\n\np 是个指针变量，里面存的是 tom 的地址。\n*p 不是“指针”，而是“指针所指的对象”（即 tom）。\n&tom 是取 tom 的地址，正好能赋值给 p。\n\n```"
   },
   {
     "objectID": "c-programming/53Stracatdemo.html",
@@ -210,58 +259,44 @@
     "text": "总结\n\n找到 s 的末尾：\nwhile (s[i] != '\\0') i++;\n从 t 复制到 s 的末尾，直到 '\\0' 为止：\nwhile ((s[i++] = t[j++]) != '\\0');\n\n最终效果：t 的内容被接到 s 后面，形成新的字符串。  —"
   },
   {
-    "objectID": "c-programming/CPointer.html",
-    "href": "c-programming/CPointer.html",
-    "title": "Pointer",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Person *p;\n这一句是定义变量：\n所以： 👉 p 本身是个指针变量，它里面存的是一个地址。 👉 这个地址必须是某个 Person 类型对象的地址。"
+    "text": "About this site"
   },
   {
-    "objectID": "c-programming/CPointer.html#tom",
-    "href": "c-programming/CPointer.html#tom",
-    "title": "Pointer",
-    "section": "2. &tom",
-    "text": "2. &tom\nPerson tom;\n&tom;\n\ntom 是一个 Person 类型的结构体变量。\n&tom 表示“取 tom 的地址”。\n&tom 的类型是 Person*。\n\n这与 p 的类型刚好匹配。"
+    "objectID": "c-programming/DynamicArray1.html",
+    "href": "c-programming/DynamicArray1.html",
+    "title": "Dynamic Array WS14",
+    "section": "",
+    "text": "#include &lt;stdio.h&gt;\n#include &lt;stdlib.h&gt;\n#include &lt;assert.h&gt;\n\n#ifndef TYPE\n#define TYPE double\n#endif\n\nstruct dynArr {\n    TYPE *data;     /* pointer to the data array */\n    int size;       /* number of elements in the array */\n    int capacity;   /* capacity of the data array */\n};\n\nvoid dynArrayInit(struct dynArr *v, int capacity) {\n    v-&gt;data = (TYPE *) malloc(sizeof(TYPE) * capacity);\n    assert(v-&gt;data != 0);\n    v-&gt;size = 0;\n    v-&gt;capacity = capacity;\n}\n\nvoid dynArrayFree(struct dynArr *v) {\n    if(v-&gt;data != 0) {\n        free(v-&gt;data);  /* free memory space */\n        v-&gt;data = 0;    /* make it point to NULL */\n    }\n    v-&gt;size = 0;\n    v-&gt;capacity = 0;\n}\n\nint dynArraySize(struct dynArr *v) {\n    return v-&gt;size;\n}\n\nvoid _dynArraySetCapacity(struct dynArr *v, int newCapacity) {\n    assert(newCapacity &gt; 0);\n\n    printf(\"⚙️ Resizing array: old capacity = %d, new capacity = %d\\n\",\n           v-&gt;capacity, newCapacity);\n\n    if (newCapacity &lt; v-&gt;size) {\n        v-&gt;size = newCapacity; /* 截断已有元素，防止越界 */\n    }\n    TYPE *newData = (TYPE *) malloc(sizeof(TYPE) * newCapacity);\n    assert(newData != 0);\n\n    for (int i = 0; i &lt; v-&gt;size; ++i) {\n        newData[i] = v-&gt;data[i];\n    }\n\n    free(v-&gt;data);\n    v-&gt;data = newData;\n    v-&gt;capacity = newCapacity;\n}\n\nvoid dynArrayAdd(struct dynArr *v, TYPE val) {\n    /* Check if a resize is necessary */\n    if(v-&gt;size &gt;= v-&gt;capacity)\n        _dynArraySetCapacity(v, 2 * v-&gt;capacity);\n    v-&gt;data[v-&gt;size] = val;\n    v-&gt;size++;\n}\n\n/* ---------- 演示用 main 函数 ---------- */\nint main() {\n    struct dynArr arr;\n    dynArrayInit(&arr, 2);  // 初始容量设为 2\n    printf(\"Initial capacity: %d\\n\", arr.capacity);\n\n    // 连续插入多个元素，触发扩容\n    for (int i = 0; i &lt; 10; i++) {\n        dynArrayAdd(&arr, i * 1.1);  // 插入 i*1.1\n        printf(\"Added %.1f | size = %d, capacity = %d\\n\",\n               arr.data[arr.size-1], arr.size, arr.capacity);\n    }\n\n    // 打印数组内容\n    printf(\"Final array: [\");\n    for (int i = 0; i &lt; arr.size; i++) {\n        printf(\"%.1f\", arr.data[i]);\n        if (i &lt; arr.size-1) printf(\", \");\n    }\n    printf(\"]\\n\");\n\n    dynArrayFree(&arr);\n    return 0;\n}"
   },
   {
-    "objectID": "c-programming/CPointer.html#p-tom",
-    "href": "c-programming/CPointer.html#p-tom",
-    "title": "Pointer",
-    "section": "3. p = &tom",
-    "text": "3. p = &tom\np = &tom;\n把 tom 的地址存进 p。结果是：p 指向 tom。\n内存可以想象成这样：\ntom (类型 Person)          p (类型 Person*)\n+------------------+       +----------------+\n| name[32]         |       | 0x1000 (地址) |\n| age              |       +----------------+\n+------------------+\n      ^\n      |\n      +---- p 里面存的就是 tom 的地址 0x1000"
+    "objectID": "c-programming/DynamicArray1.html#output",
+    "href": "c-programming/DynamicArray1.html#output",
+    "title": "Dynamic Array WS14",
+    "section": "Output",
+    "text": "Output\nInitial capacity: 2\nAdded 0.0 | size = 1, capacity = 2\nAdded 1.1 | size = 2, capacity = 2\n⚙️ Resizing array: old capacity = 2, new capacity = 4\nAdded 2.2 | size = 3, capacity = 4\nAdded 3.3 | size = 4, capacity = 4\n⚙️ Resizing array: old capacity = 4, new capacity = 8\nAdded 4.4 | size = 5, capacity = 8\nAdded 5.5 | size = 6, capacity = 8\nAdded 6.6 | size = 7, capacity = 8\nAdded 7.7 | size = 8, capacity = 8\n⚙️ Resizing array: old capacity = 8, new capacity = 16\nAdded 8.8 | size = 9, capacity = 16\nAdded 9.9 | size = 10, capacity = 16\nFinal array: [0.0, 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9]\n=== Code Execution Successful ==="
   },
   {
-    "objectID": "c-programming/CPointer.html#p-的意思",
-    "href": "c-programming/CPointer.html#p-的意思",
-    "title": "Pointer",
-    "section": "4. *p 的意思",
-    "text": "4. *p 的意思\n\np 是一个指针，存了地址。\n*p 表示“解引用”这个指针，找到它指向的对象”。\n所以 *p 的类型是 Person，等价于“tom 本身”。\n\n示例：\n(*p).age = 20;   // 相当于 tom.age = 20;"
-  },
-  {
-    "objectID": "c-programming/CPointer.html#和---的关系",
-    "href": "c-programming/CPointer.html#和---的关系",
-    "title": "Pointer",
-    "section": "5. 和 -> 的关系",
-    "text": "5. 和 -&gt; 的关系\n因为 (*p).age 太啰嗦，C 提供简写：\np-&gt;age = 20;   // 等价于 (*p).age"
-  },
-  {
-    "objectID": "c-programming/CPointer.html#总结一句",
-    "href": "c-programming/CPointer.html#总结一句",
-    "title": "Pointer",
-    "section": "✅ 总结一句",
-    "text": "✅ 总结一句\n\np 是个指针变量，里面存的是 tom 的地址。\n*p 不是“指针”，而是“指针所指的对象”（即 tom）。\n&tom 是取 tom 的地址，正好能赋值给 p。\n\n```"
+    "objectID": "c-programming/DynamicArray1.html#note",
+    "href": "c-programming/DynamicArray1.html#note",
+    "title": "Dynamic Array WS14",
+    "section": "Note",
+    "text": "Note\nIn C, the compiler cannot identify whether the result would exceed maximum memory location of the array. Thus we need the dynamic array"
   },
   {
     "objectID": "c-programming/index.html",
     "href": "c-programming/index.html",
-    "title": "C Programming Blog",
+    "title": "C 语言编程博客",
     "section": "",
-    "text": "欢迎来到 C 语言编程专区！这里分享系统编程、算法实现的相关内容。"
+    "text": "欢迎来到 C 语言编程专区！这里分享系统编程、算法实现相关内容。\n\n\n\n\n\n\n\n\n\nUntitled\n\n\n\n\n\n\n\n\n2025-11-02\n\n\n\n\n\n\n\nSolutions 5.3 Optimized Strcat.C\n\n\n\n\n\n\n\n\n2025-11-02\n\n\n\n\n\n\n\nPointer\n\n\n\n\n\n\n\n\n2025-11-02\n\n\n\n\n\n\n\nHackerRank C Solutions\n\n\n\n\n\n\n\n\n2025-11-02\n\n\n\n\n\n\n\nLinked list Program\n\n\n\n\n\n\n\n\n2025-11-02\n\n\n\n\n\n\n\nDynamic Array WS14\n\n\n\n\n\n\n\n\n2025-11-02\n\n\n\n\n\n\n\nHackerRank C Solutions\n\n\n\n\n\n\n\n\n2025-10-11\n\n\n\n\n\n\n\npushback complete program integer version\n\n\n\n\n\n\n\n\n2025-09-27\n\n\n\n\n\n\n\nLinkedlist Attempt,recitating push_back function , print function,\n\n\n\n\n\n\n\n\n2025-09-27\n\n\n\n\n\n\n\nLinkedlist Attempt,recitating push_back function , print function,\n\n\n\n\n\n\n\n\n2025-09-26\n\n\n\n\n\n\n\nSolutions 5.3 Optimized Strcat.C\n\n\n文章描述\n\n\n\n\n\n2024-01-15\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "c-programming/October5thPractice.html",
     "href": "c-programming/October5thPractice.html",
-    "title": "Tong Su's Blog",
+    "title": "HackerRank C Solutions",
     "section": "",
     "text": "#include &lt;stdio.h&gt;\n#include &lt;stdlib.h&gt;\n\ntypedef struct Node{\n int data;\n struct Node *next;\n}\n\nint main(void);\nvoid print_list(Node *head);\n\nNode* push_back(Node *last, int value);\n\nNode* push_back(Node *last, int value){\n    if(last == NULL){\n        last = (Node *)malloc(sizeof(Node));\n        last-&gt;data = value;\n        last-&gt;next = NULL;\n        return last;\n    }\n    Node *newNode = (Node *)malloc(sizeof(Node));\n    newNode-&gt;data = value;\n    newNode-&gt;next = last;\n    return newNode;\n}\nvoid print_list(Node *head){\n    for(Node *cur = head;cur;cur = cur-&gt;next){\n        printf(\"%d\",cur-&gt;data);\n        printf(\"\\n\");\n    }\n     \n    printf(\"\\n\");\n    \n}\n\n\n\n\nint main(void){\n    Node *head = NULL;\n    Node *tail = NULL;\n    head = push_back(NULL, 11111);\n    tail = head;\n    tail = push_back(tail,11112);\n    tail = push_back(tail,11113);\n    print_list(head);\n    return 0;\n}\n你的 push_back 实际上在“头部插入”（更像 push_front），而且没有把旧的 tail 连到新节点上，所以 head 仍然只指向第一个节点 11111，它的 next 依旧是 NULL，打印当然只会输出一个数。\n关键错误在这里：\nnewNode-&gt;next = last; // 这行把新节点指向了旧 tail（等于往前插） return newNode; // 但没有让旧 tail-&gt;next 指向新节点\n把它改成真正的“尾插”：让旧 last（也就是当前尾节点）的 next 指向新节点；新节点的 next 置为 NULL；然后返回新尾节点即可。\n另外你少了 typedef 的别名定义。下面是一份最小改动、可工作的版本：\n#include &lt;stdio.h&gt; #include &lt;stdlib.h&gt;\ntypedef struct Node{ int data; struct Node *next; } Node;\nvoid print_list(Node *head);\nNode* push_back(Node last, int value){ Node newNode = (Node *)malloc(sizeof(Node)); if (!newNode) { perror(“malloc”); exit(1); } newNode-&gt;data = value; newNode-&gt;next = NULL;\nif (last) {\n    last-&gt;next = newNode;   // 旧尾巴连到新节点\n}\nreturn newNode;             // 返回新的尾节点\n}\nvoid print_list(Node head){ for (Node cur = head; cur; cur = cur-&gt;next){ printf(“%d”, cur-&gt;data); } printf(“”); }\nint main(void){ Node head = NULL; Node tail = NULL;\nhead = push_back(NULL, 11111); // 创建第一个节点\ntail = head;                   // 头尾同一节点\n\ntail = push_back(tail, 11112); // 追加到尾部，更新 tail\ntail = push_back(tail, 11113);\n\nprint_list(head);              // 输出 11111 11112 11113\nreturn 0;\n}\n要点小结：\n“尾插”逻辑：last-&gt;next = newNode; newNode-&gt;next = NULL; return newNode;\n第一个节点单独处理：head = push_back(NULL, value); tail = head;\n别忘了补上 typedef … } Node;，否则 Node 这个类型名不存在。"
   },
@@ -308,10 +343,87 @@
     "text": "Below is the original dynArrayAdd function\nwhich we need to write a setCapacity function to be compactible with it\nvoid dynArrayAdd(struct dynArr *v, TYPE val) {  \n/* Check if a resize is necessary */  \nif(v-&gt;size &gt;= v-&gt;capacity)  \n_dynArraySetCapacity(v, 2 * v-&gt;capacity);  \nv-&gt;data[v-&gt;size] = val;  \nv-&gt;size++;  \n}"
   },
   {
-    "objectID": "matlab/Example1.html",
-    "href": "matlab/Example1.html",
-    "title": "Quarto Basics",
+    "objectID": "data-structures/C++/index.html",
+    "href": "data-structures/C++/index.html",
+    "title": "Data Structures with C++",
     "section": "",
-    "text": "Protected\n    Enter password to view this page:\n    \n    Unlock\n    Wrong password\n  \n\n\n\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n    👍 +1\n  \n  0\n  \n\n\n\n  \n    👍 点赞\n  \n  0"
+    "text": "欢迎来到 C++ 数据结构专区！这里分享 STL 容器、模板技巧与算法实践。\n\n\n← 返回 Data Structures 首页"
+  },
+  {
+    "objectID": "data-structures/C++/index.html#文章",
+    "href": "data-structures/C++/index.html#文章",
+    "title": "Data Structures with C++",
+    "section": "",
+    "text": "← 返回 Data Structures 首页"
+  },
+  {
+    "objectID": "data-structures/Java/index.html",
+    "href": "data-structures/Java/index.html",
+    "title": "Data Structures with Java",
+    "section": "",
+    "text": "欢迎来到 Java 数据结构专区！这里整理集合框架、算法模板与实践经验。\n\n\n← 返回 Data Structures 首页"
+  },
+  {
+    "objectID": "data-structures/Java/index.html#文章",
+    "href": "data-structures/Java/index.html#文章",
+    "title": "Data Structures with Java",
+    "section": "",
+    "text": "← 返回 Data Structures 首页"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to My Blog",
+    "section": "",
+    "text": "This is my first Quarto website. Here I can publish notes, code, and experiments.\n\n\n\n\n\n\n\n\n\n\nC programming Modern Approach\nC solutions\nThe C answer book\nlogic circuit visualizer DigitalJS\n\n\n\n\n\nBuilt with Quarto\nPublished on Quarto Pub\n\nSource code available on GitHub\n\n\n\n\n\n🌐 GitHub: @TONGSUOregonState"
+  },
+  {
+    "objectID": "index.html#博客分类",
+    "href": "index.html#博客分类",
+    "title": "Welcome to My Blog",
+    "section": "",
+    "text": "C programming Modern Approach\nC solutions\nThe C answer book\nlogic circuit visualizer DigitalJS\n\n\n\n\n\nBuilt with Quarto\nPublished on Quarto Pub\n\nSource code available on GitHub\n\n\n\n\n\n🌐 GitHub: @TONGSUOregonState"
+  },
+  {
+    "objectID": "index.html#about-this-site",
+    "href": "index.html#about-this-site",
+    "title": "Welcome to My Blog",
+    "section": "",
+    "text": "Built with Quarto\nPublished on Quarto Pub\n\nSource code available on GitHub"
+  },
+  {
+    "objectID": "index.html#联系方式-contact",
+    "href": "index.html#联系方式-contact",
+    "title": "Welcome to My Blog",
+    "section": "",
+    "text": "🌐 GitHub: @TONGSUOregonState"
+  },
+  {
+    "objectID": "matlab/index.html",
+    "href": "matlab/index.html",
+    "title": "MATLAB Blog",
+    "section": "",
+    "text": "欢迎来到MATLAB专区！这里记录我的MATLAB学习笔记和项目经验。\n\n\n\n\n我的MATLAB项目实现和代码分析。\n← 返回主页"
+  },
+  {
+    "objectID": "matlab/index.html#文章",
+    "href": "matlab/index.html#文章",
+    "title": "MATLAB Blog",
+    "section": "",
+    "text": "我的MATLAB项目实现和代码分析。\n← 返回主页"
+  },
+  {
+    "objectID": "myblog/Linkedlist.html",
+    "href": "myblog/Linkedlist.html",
+    "title": "Linked List Demo",
+    "section": "",
+    "text": "```{.c} #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\n// … 这里粘贴完整的 Linkedlist.c 代码 … #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\ntypedef struct Node { char name[32]; struct Node *next; } Node;\n/* 在链表尾部插入 name，返回“新的尾结点” / Node push_back(Node last, const char name) { Node p = (Node)malloc(sizeof(Node)); if (!p) { perror(“malloc”); exit(1); }\nstrncpy(p-&gt;name, name, sizeof(p-&gt;name)-1);\np-&gt;name[sizeof(p-&gt;name)-1] = '\\0';\np-&gt;next = NULL;\n\nif (last) {               // 不是第一个节点：把它接在尾巴后\n    last-&gt;next = p;\n}\nreturn p;                 // 返回新的“尾结点”\n}\n/* 打印链表 / void print_list(Node head) { for (Node *cur = head; cur; cur = cur-&gt;next) { printf(“%s%s”, cur-&gt;name, cur-&gt;next ? ” -&gt; ” : ” -&gt; null“); } }\n/* 统计节点数 / int count(Node h) { int numberofnodes = 0; for (Node *p = h; p != NULL; p = p-&gt;next) { numberofnodes++; } return numberofnodes; }\nint main(void) { Node head = NULL; Node tail = NULL;\n// 构造图里的初始链表：Jacob -&gt; Joseph -&gt; Mary\ntail = push_back(NULL, \"Jacob\");  // 第一个节点\nhead = tail;                      // 记录头指针\ntail = push_back(tail, \"Joseph\"); // 接在尾部\ntail = push_back(tail, \"Mary\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\\n\", count(head));\n\n// 在末尾插入 Ann（对应 Fig. 3.6 第二行）\ntail = push_back(tail, \"Ann\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\", count(head));\n\nreturn 0;\n}"
+  },
+  {
+    "objectID": "myblog/Linkedlist.html#原始-c-程序",
+    "href": "myblog/Linkedlist.html#原始-c-程序",
+    "title": "Linked List Demo",
+    "section": "",
+    "text": "```{.c} #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\n// … 这里粘贴完整的 Linkedlist.c 代码 … #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;\ntypedef struct Node { char name[32]; struct Node *next; } Node;\n/* 在链表尾部插入 name，返回“新的尾结点” / Node push_back(Node last, const char name) { Node p = (Node)malloc(sizeof(Node)); if (!p) { perror(“malloc”); exit(1); }\nstrncpy(p-&gt;name, name, sizeof(p-&gt;name)-1);\np-&gt;name[sizeof(p-&gt;name)-1] = '\\0';\np-&gt;next = NULL;\n\nif (last) {               // 不是第一个节点：把它接在尾巴后\n    last-&gt;next = p;\n}\nreturn p;                 // 返回新的“尾结点”\n}\n/* 打印链表 / void print_list(Node head) { for (Node *cur = head; cur; cur = cur-&gt;next) { printf(“%s%s”, cur-&gt;name, cur-&gt;next ? ” -&gt; ” : ” -&gt; null“); } }\n/* 统计节点数 / int count(Node h) { int numberofnodes = 0; for (Node *p = h; p != NULL; p = p-&gt;next) { numberofnodes++; } return numberofnodes; }\nint main(void) { Node head = NULL; Node tail = NULL;\n// 构造图里的初始链表：Jacob -&gt; Joseph -&gt; Mary\ntail = push_back(NULL, \"Jacob\");  // 第一个节点\nhead = tail;                      // 记录头指针\ntail = push_back(tail, \"Joseph\"); // 接在尾部\ntail = push_back(tail, \"Mary\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\\n\", count(head));\n\n// 在末尾插入 Ann（对应 Fig. 3.6 第二行）\ntail = push_back(tail, \"Ann\");\n\nprint_list(head);\nprintf(\"This linked list has %d nodes.\\n\", count(head));\n\nreturn 0;\n}"
   }
 ]

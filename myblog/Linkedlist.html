@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MATLAB Blog – Tong Su’s Blog</title>
+<title>Linked List Demo – Tong Su’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -97,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../matlab/index.html" aria-current="page"> 
+    <a class="nav-link" href="../matlab/index.html"> 
 <span class="menu-text">MATLAB</span></a>
   </li>  
   <li class="nav-item">
@@ -147,13 +147,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#matlab-相关博客" id="toc-matlab-相关博客" class="nav-link active" data-scroll-target="#matlab-相关博客">MATLAB 相关博客 📊</a>
-  <ul class="collapse">
-  <li><a href="#文章" id="toc-文章" class="nav-link" data-scroll-target="#文章">文章</a>
-  <ul class="collapse">
-  <li><a href="#example1" id="toc-example1" class="nav-link" data-scroll-target="#example1">Example1</a></li>
-  </ul></li>
-  </ul></li>
+  <li><a href="#原始-c-程序" id="toc-原始-c-程序" class="nav-link active" data-scroll-target="#原始-c-程序">原始 C 程序</a></li>
   </ul>
 </nav>
     </div>
@@ -162,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">MATLAB Blog</h1>
+<h1 class="title">Linked List Demo</h1>
 </div>
 
 
@@ -174,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2025-09-17</p>
+      <p class="date-modified">2025-10-12</p>
     </div>
   </div>
     
@@ -185,19 +179,43 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="matlab-相关博客" class="level1">
-<h1>MATLAB 相关博客 📊</h1>
-<p>欢迎来到MATLAB专区！这里记录我的MATLAB学习笔记和项目经验。</p>
-<section id="文章" class="level2">
-<h2 class="anchored" data-anchor-id="文章">文章</h2>
-<section id="example1" class="level3">
-<h3 class="anchored" data-anchor-id="example1"><a href="../matlab/Example1.html">Example1</a></h3>
-<p>我的MATLAB项目实现和代码分析。</p>
-<p><a href="../index.html">← 返回主页</a></p>
+<section id="原始-c-程序" class="level2">
+<h2 class="anchored" data-anchor-id="原始-c-程序">原始 C 程序</h2>
+<p>```{.c} #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;</p>
+<p>// … 这里粘贴完整的 Linkedlist.c 代码 … #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt;</p>
+<p>typedef struct Node { char name[32]; struct Node *next; } Node;</p>
+<p>/* 在链表尾部插入 name，返回“新的尾结点” <em>/ Node</em> push_back(Node <em>last, const char </em>name) { Node <em>p = (Node</em>)malloc(sizeof(Node)); if (!p) { perror(“malloc”); exit(1); }</p>
+<pre><code>strncpy(p-&gt;name, name, sizeof(p-&gt;name)-1);
+p-&gt;name[sizeof(p-&gt;name)-1] = '\0';
+p-&gt;next = NULL;
+
+if (last) {               // 不是第一个节点：把它接在尾巴后
+    last-&gt;next = p;
+}
+return p;                 // 返回新的“尾结点”</code></pre>
+<p>}</p>
+<p>/* 打印链表 <em>/ void print_list(Node </em>head) { for (Node *cur = head; cur; cur = cur-&gt;next) { printf(“%s%s”, cur-&gt;name, cur-&gt;next ? ” -&gt; ” : ” -&gt; null“); } }</p>
+<p>/* 统计节点数 <em>/ int count(Node </em>h) { int numberofnodes = 0; for (Node *p = h; p != NULL; p = p-&gt;next) { numberofnodes++; } return numberofnodes; }</p>
+<p>int main(void) { Node <em>head = NULL; Node </em>tail = NULL;</p>
+<pre><code>// 构造图里的初始链表：Jacob -&gt; Joseph -&gt; Mary
+tail = push_back(NULL, "Jacob");  // 第一个节点
+head = tail;                      // 记录头指针
+tail = push_back(tail, "Joseph"); // 接在尾部
+tail = push_back(tail, "Mary");
+
+print_list(head);
+printf("This linked list has %d nodes.\n\n", count(head));
+
+// 在末尾插入 Ann（对应 Fig. 3.6 第二行）
+tail = push_back(tail, "Ann");
+
+print_list(head);
+printf("This linked list has %d nodes.\n", count(head));
+
+return 0;</code></pre>
+<p>}</p>
 
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->

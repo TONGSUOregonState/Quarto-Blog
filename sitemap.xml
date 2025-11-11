@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/matlab/index.html</loc>
-    <lastmod>2025-09-17T17:11:34.899Z</lastmod>
+    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/updates.html</loc>
+    <lastmod>2025-11-11T11:10:08.571Z</lastmod>
   </url>
   <url>
-    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/index.html</loc>
-    <lastmod>2025-09-22T14:44:01.121Z</lastmod>
+    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/myblog/about.html</loc>
+    <lastmod>2025-10-13T00:08:25.393Z</lastmod>
+  </url>
+  <url>
+    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/matlab/Example1.html</loc>
+    <lastmod>2025-10-13T02:25:28.274Z</lastmod>
+  </url>
+  <url>
+    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/Example1.html</loc>
+    <lastmod>2025-10-13T00:08:25.331Z</lastmod>
+  </url>
+  <url>
+    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/data-structures/python/index.html</loc>
+    <lastmod>2025-11-11T10:44:16.204Z</lastmod>
+  </url>
+  <url>
+    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/data-structures/index.html</loc>
+    <lastmod>2025-11-02T22:27:15.860Z</lastmod>
+  </url>
+  <url>
+    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/data-structures/C/index.html</loc>
+    <lastmod>2025-11-11T10:44:16.194Z</lastmod>
   </url>
   <url>
     <loc>https://TONGSUOregonState.github.io/Quarto-Blog/c-programming/pushbackcomplete.html</loc>
@@ -18,35 +38,39 @@
   </url>
   <url>
     <loc>https://TONGSUOregonState.github.io/Quarto-Blog/c-programming/Linkedlist.html</loc>
-    <lastmod>2025-10-11T07:41:34.955Z</lastmod>
+    <lastmod>2025-11-02T11:07:50.394Z</lastmod>
   </url>
   <url>
-    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/c-programming/DynamicArray1.html</loc>
-    <lastmod>2025-09-28T03:59:48.438Z</lastmod>
+    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/c-programming/HackerRank.html</loc>
+    <lastmod>2025-11-02T11:06:18.284Z</lastmod>
   </url>
   <url>
-    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/c-programming/code editor.html</loc>
-    <lastmod>2025-10-11T08:05:03.337Z</lastmod>
+    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/c-programming/CPointer.html</loc>
+    <lastmod>2025-11-02T11:15:25.812Z</lastmod>
+  </url>
+  <url>
+    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/c-programming/53Stracatdemo.html</loc>
+    <lastmod>2025-11-02T22:30:52.012Z</lastmod>
   </url>
   <url>
     <loc>https://TONGSUOregonState.github.io/Quarto-Blog/about.html</loc>
     <lastmod>2025-09-17T00:29:30.905Z</lastmod>
   </url>
   <url>
-    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/c-programming/53Stracatdemo.html</loc>
-    <lastmod>2025-10-11T08:02:15.473Z</lastmod>
+    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/c-programming/code editor.html</loc>
+    <lastmod>2025-10-11T08:05:03.337Z</lastmod>
   </url>
   <url>
-    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/c-programming/CPointer.html</loc>
-    <lastmod>2025-10-11T08:08:02.885Z</lastmod>
+    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/c-programming/DynamicArray1.html</loc>
+    <lastmod>2025-11-02T11:05:01.915Z</lastmod>
   </url>
   <url>
     <loc>https://TONGSUOregonState.github.io/Quarto-Blog/c-programming/index.html</loc>
-    <lastmod>2025-09-27T02:06:44.131Z</lastmod>
+    <lastmod>2025-11-02T11:09:23.540Z</lastmod>
   </url>
   <url>
     <loc>https://TONGSUOregonState.github.io/Quarto-Blog/c-programming/October5thPractice.html</loc>
-    <lastmod>2025-10-11T07:54:56.772Z</lastmod>
+    <lastmod>2025-11-02T11:08:19.168Z</lastmod>
   </url>
   <url>
     <loc>https://TONGSUOregonState.github.io/Quarto-Blog/c-programming/pushbackattempt2.html</loc>
@@ -54,10 +78,26 @@
   </url>
   <url>
     <loc>https://TONGSUOregonState.github.io/Quarto-Blog/c-programming/setCapacityFucntionIllustration.html</loc>
-    <lastmod>2025-09-29T00:49:26.418Z</lastmod>
+    <lastmod>2025-11-02T22:34:05.040Z</lastmod>
   </url>
   <url>
-    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/matlab/Example1.html</loc>
-    <lastmod>2025-10-11T09:45:23.179Z</lastmod>
+    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/data-structures/C++/index.html</loc>
+    <lastmod>2025-11-11T10:44:16.184Z</lastmod>
+  </url>
+  <url>
+    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/data-structures/Java/index.html</loc>
+    <lastmod>2025-11-11T10:44:16.204Z</lastmod>
+  </url>
+  <url>
+    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/index.html</loc>
+    <lastmod>2025-09-22T14:44:01.121Z</lastmod>
+  </url>
+  <url>
+    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/matlab/index.html</loc>
+    <lastmod>2025-09-17T17:11:34.899Z</lastmod>
+  </url>
+  <url>
+    <loc>https://TONGSUOregonState.github.io/Quarto-Blog/myblog/Linkedlist.html</loc>
+    <lastmod>2025-10-13T00:08:25.377Z</lastmod>
   </url>
 </urlset>

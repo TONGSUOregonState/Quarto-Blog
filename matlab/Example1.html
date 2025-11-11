@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Quarto Basics – Tong Su’s Blog</title>
+<title>example1 – Tong Su's Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -106,7 +71,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../styles.css">
-<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -141,6 +105,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">C Programming</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../c-plus-plus/index.html"> 
+<span class="menu-text">C++</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Digital-Logic-Design/index.html"> 
+<span class="menu-text">Digital Logic Design</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../data-structures/index.html"> 
+<span class="menu-text">Data Structures</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../updates.html"> 
+<span class="menu-text">更新日志</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
@@ -170,7 +150,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Quarto Basics</h1>
 </div>
 
 
@@ -179,191 +158,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
     
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">2025-10-12</p>
+    </div>
+  </div>
     
   </div>
   
 
 
 </header>
-
-
-<div id="lock-overlay" style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#fff;z-index:9999">
-  <div style="max-width:340px;width:90%;border:1px solid #ddd;padding:16px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06);">
-    <h3 style="margin:0 0 8px" class="anchored">Protected</h3>
-    <p style="margin:0 0 8px">Enter password to view this page:</p>
-    <input id="lock-pass" type="password" placeholder="Password" style="width:100%;padding:8px 10px;margin-bottom:8px">
-    <button id="lock-btn" style="width:100%;padding:8px 10px;cursor:pointer">Unlock</button>
-    <p id="lock-msg" style="color:#c00;font-size:0.9em;display:none;margin-top:8px">Wrong password</p>
-  </div>
-</div>
-<script>
-  const ok = "6c72b80ca39cd956c16d2fc662186f22"; 
-  function md5(s){return CryptoJS.MD5(s).toString()}
-  window.addEventListener('DOMContentLoaded', ()=>{
-    const overlay=document.getElementById('lock-overlay');
-    const input=document.getElementById('lock-pass');
-    const btn=document.getElementById('lock-btn');
-    const msg=document.getElementById('lock-msg');
-    btn.onclick=()=>{ if(md5(input.value)===ok){ overlay.remove(); } else { msg.style.display='block'; } };
-  });
-</script>
-<script src="https://cdn.jsdelivr.net/npm/crypto-js@4.2.0/crypto-js.min.js"></script>
-<div id="cell-fig-polar" class="cell" data-execution_count="1">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">'projection'</span>: <span class="st">'polar'</span>})</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>ax.plot(theta, r)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-display">
-<div id="fig-polar" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-polar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Example1_files/figure-html/fig-polar-output-1.png" width="450" height="439" class="figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-polar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: A line plot on a polar axis
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<style>
-/* 让 Cusdis 评论区全宽显示、避免内部滚动条 */
-#cusdis_thread,
-#cusdis_thread iframe,
-.cusdis,
-.cusdis iframe {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important;
-  min-height: 600px !important;
-  overflow: visible !important;
-}
-#cusdis_thread { margin-top: 1.5rem; }
-</style>
-
-<div id="cusdis_thread" data-host="https://cusdis.com" data-app-id="8e84f4b9-8161-42da-8354-0d1b8c77f377" data-page-id="{{ page.path }}" data-page-url="{{ page.url }}" data-page-title="{{ page.title }}">
-</div>
-<script async="" defer="" src="https://cusdis.com/js/cusdis.es.js"></script>
-
-
-<div id="like-box" style="margin:16px 0;display:flex;gap:10px;align-items:center">
-  <button id="like-btn" style="padding:6px 12px;border:1px solid #ccc;border-radius:8px;cursor:pointer">
-    👍 +1
-  </button>
-  <span id="like-count" style="font-weight:600">0</span>
-  <span id="like-hint" style="color:#666"></span>
-</div>
-<!-- ================== 点赞模块 ================== -->
-<div id="like-box" data-page-id="matlab-example1" style="margin: 16px 0; display: flex; gap: 10px; align-items: center;">
-  <button id="like-btn" style="padding: 8px 16px; border: 2px solid #3b82f6; border-radius: 8px; background: white; cursor: pointer; font-size: 16px; transition: all 0.2s;">
-    👍 点赞
-  </button>
-  <span id="like-count" style="font-weight: 600; font-size: 20px; color: #3b82f6;">0</span>
-  <span id="like-hint" style="color: #666; font-size: 14px;"></span>
-</div>
-
-<script type="module">
-  // ========== Supabase 配置信息 ==========
-  const SUPABASE_URL = "https://zvzsnuwxevmhzwivepbm.supabase.co";
-  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp2enNudXd4ZXZtaHp3aXZlcGJtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAxMzkxMDgsImV4cCI6MjA3NTcxNTEwOH0.roiOOUn7lKOh0hgN2qpQFUSiSgTA2ZCY3i9LjJDTTu4";
-  // =====================================
-
-  // 优先读取 HTML 中写死的 ID（最稳定）
-  function normalizedPageId() {
-    const box = document.getElementById("like-box");
-    const manual = box?.dataset?.pageId;
-    if (manual && manual.trim()) return manual.trim();
-
-    // 备用方案：URL 自动生成（仅用于没写 data-page-id 的情况）
-    const url = new URL(location.href);
-    const path = (url.pathname.replace(/\/+$/,'') || '/').toLowerCase();
-    return `${url.host}${path}`;
-  }
-  const pageId = normalizedPageId();
-
-  import("https://esm.sh/@supabase/supabase-js@2").then(async ({ createClient }) => {
-    const sb = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-    const btn = document.getElementById("like-btn");
-    const out = document.getElementById("like-count");
-    const hint = document.getElementById("like-hint");
-
-    // 读取点赞数
-    async function loadCount() {
-      const { data, error } = await sb
-        .from("likes")
-        .select("count")
-        .eq("page_id", pageId)
-        .maybeSingle();
-
-      if (error) {
-        console.error("加载失败:", error);
-        hint.textContent = "加载失败";
-        return;
-      }
-      out.textContent = data?.count ?? 0;
-    }
-
-    // 调用数据库函数自增点赞
-    async function incrementLike() {
-      const { data, error } = await sb.rpc("like_inc", { pid: pageId });
-      if (error) {
-        console.error("点赞失败:", error);
-        return { error };
-      }
-      return { data: { count: data } };
-    }
-
-    // 防止并发点击
-    let inflight = false;
-
-    btn.addEventListener("click", async () => {
-      if (inflight) return;
-      inflight = true;
-      btn.disabled = true;
-      const prev = btn.textContent;
-      btn.textContent = "👍 提交中...";
-
-      // 乐观更新
-      const optimistic = parseInt(out.textContent || "0", 10);
-      out.textContent = String(optimistic + 1);
-
-      const { data, error } = await incrementLike();
-
-      if (error) {
-        // 回滚
-        out.textContent = String(Math.max(0, optimistic));
-        hint.textContent = "点赞失败，请重试";
-        btn.textContent = prev;
-        btn.disabled = false;
-        inflight = false;
-        return;
-      }
-
-      // 更新显示
-      out.textContent = data.count;
-      btn.textContent = "👍 点赞";
-      hint.textContent = "感谢支持 ❤️";
-      btn.disabled = false;
-      inflight = false;
-    });
-
-    // 初始化加载
-    await loadCount();
-  }).catch(err => {
-    console.error("初始化失败:", err);
-    document.getElementById("like-hint").textContent = "初始化失败，请检查配置";
-  });
-</script>
-
 
 
 
