@@ -1,0 +1,15 @@
+---
+title: "Data Structures with Java"
+listing:
+  contents: .
+  sort: "date desc"
+  type: default
+---
+
+# Java 数据结构笔记 ☕
+
+欢迎来到 Java 数据结构专区！这里整理集合框架、算法模板与实践经验。
+
+## 文章
+
+[← 返回 Data Structures 首页](../index.qmd)
