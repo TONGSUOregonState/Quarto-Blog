@@ -1,0 +1,15 @@
+---
+title: "Data Structures with C++"
+listing:
+  contents: .
+  sort: "date desc"
+  type: default
+---
+
+# C++ 数据结构笔记 🧠
+
+欢迎来到 C++ 数据结构专区！这里分享 STL 容器、模板技巧与算法实践。
+
+## 文章
+
+[← 返回 Data Structures 首页](../index.qmd)
